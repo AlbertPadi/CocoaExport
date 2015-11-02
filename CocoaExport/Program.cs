@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using CocoaExport.Vistas;
 namespace CocoaExport
 {
     static class Program
@@ -16,7 +16,7 @@ namespace CocoaExport
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Principal());
+            Application.Run(new Login());
         }
     }
 }

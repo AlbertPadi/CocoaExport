@@ -73,6 +73,16 @@ namespace CocoaExport.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap businessman_person_web_login_friend_web_browser_32 {
+            get {
+                object obj = ResourceManager.GetObject("businessman_person_web_login_friend_web_browser-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Carpeta {
             get {
                 object obj = ResourceManager.GetObject("Carpeta", resourceCulture);
@@ -116,6 +126,16 @@ namespace CocoaExport.Properties {
         internal static System.Drawing.Bitmap list_add_user {
             get {
                 object obj = ResourceManager.GetObject("list-add-user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plus_32 {
+            get {
+                object obj = ResourceManager.GetObject("plus-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

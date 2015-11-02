@@ -16,5 +16,10 @@ namespace CocoaExport
         {
             InitializeComponent();
         }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

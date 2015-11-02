@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.label6 = new System.Windows.Forms.Label();
-            this.Registrarbutton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.Exportacionbutton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.Registrarbutton = new System.Windows.Forms.Button();
             this.Lotesbutton = new System.Windows.Forms.Button();
             this.CentrosAcpbutton = new System.Windows.Forms.Button();
             this.Inspeccionesbutton = new System.Windows.Forms.Button();
@@ -53,16 +54,6 @@
             this.label6.Size = new System.Drawing.Size(72, 16);
             this.label6.TabIndex = 25;
             this.label6.Text = "Registrar";
-            // 
-            // Registrarbutton
-            // 
-            this.Registrarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Registrarbutton.Image = global::CocoaExport.Properties.Resources.list_add_user;
-            this.Registrarbutton.Location = new System.Drawing.Point(356, 289);
-            this.Registrarbutton.Name = "Registrarbutton";
-            this.Registrarbutton.Size = new System.Drawing.Size(85, 39);
-            this.Registrarbutton.TabIndex = 24;
-            this.Registrarbutton.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -124,6 +115,16 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Registrar Socios";
             // 
+            // Registrarbutton
+            // 
+            this.Registrarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Registrarbutton.Image = global::CocoaExport.Properties.Resources.list_add_user;
+            this.Registrarbutton.Location = new System.Drawing.Point(356, 289);
+            this.Registrarbutton.Name = "Registrarbutton";
+            this.Registrarbutton.Size = new System.Drawing.Size(85, 39);
+            this.Registrarbutton.TabIndex = 24;
+            this.Registrarbutton.UseVisualStyleBackColor = true;
+            // 
             // Lotesbutton
             // 
             this.Lotesbutton.Image = global::CocoaExport.Properties.Resources.Carpeta;
@@ -164,9 +165,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CocoaExport.Properties.Resources.img14132485a794a2fb51;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(-4, -3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(807, 197);
+            this.pictureBox1.Size = new System.Drawing.Size(815, 200);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
@@ -190,8 +191,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.RegistrarSbutton);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Principal";
             this.Text = "Principal";
+            this.Load += new System.EventHandler(this.Principal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
