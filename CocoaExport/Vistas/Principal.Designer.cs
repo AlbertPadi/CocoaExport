@@ -161,6 +161,7 @@
             this.RegistrarSbutton.Size = new System.Drawing.Size(85, 39);
             this.RegistrarSbutton.TabIndex = 14;
             this.RegistrarSbutton.UseVisualStyleBackColor = true;
+            this.RegistrarSbutton.Click += new System.EventHandler(this.RegistrarSbutton_Click);
             // 
             // pictureBox1
             // 

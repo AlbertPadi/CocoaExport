@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CocoaExport.Vistas
 {
-    public partial class RegistroUsuarios : Form
+    public partial class CentrosAcopio : Form
     {
-        public RegistroUsuarios()
+        public CentrosAcopio()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

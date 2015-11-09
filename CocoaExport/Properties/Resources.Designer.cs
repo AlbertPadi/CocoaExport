@@ -63,6 +63,26 @@ namespace CocoaExport.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1441773161_save {
+            get {
+                object obj = ResourceManager.GetObject("1441773161_save", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1443814210_fine_print {
+            get {
+                object obj = ResourceManager.GetObject("1443814210_fine_print", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1444595857_add_user {
             get {
                 object obj = ResourceManager.GetObject("1444595857_add_user", resourceCulture);
@@ -136,6 +156,16 @@ namespace CocoaExport.Properties {
         internal static System.Drawing.Bitmap plus_32 {
             get {
                 object obj = ResourceManager.GetObject("plus-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap trash_circle_red_32 {
+            get {
+                object obj = ResourceManager.GetObject("trash-circle-red-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

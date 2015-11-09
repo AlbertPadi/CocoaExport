@@ -7,24 +7,24 @@ use CocoaExport
 --Creamos la tabla Registro Usuarios
 create table Usuarios(UsuarioId int primary key identity , Nombre varchar(50), 
 								Apellido varchar(50), Direccion varchar(50),
-								Cedula numeric, sexo int, Clave varchar(100));
+								NombreUsuario varchar(40), Contraseña varchar(100));
 								
 --Creamos la tabla Registro de Socios
 create table Socios(SocioId int primary key identity, Nombre varchar(50), Apellido varchar(50),
 								Direccion varchar(40),Cedula integer, Codigo int, Hectareas float, 
-								Fertilizantes varchar(10));
-							
+								Fertilizantes int);
+						select *from Socios;
 --Creamos la tabla Inspecciones para la inspeccion a las fincas de los socios
 create table Inspecciones(InspeccionesId int primary key identity, SocioId int References Socios(SocioId), 
-								Fecha varchar (20), CantidadTerreno float,Fertilizantes varchar(10), 
-								MaterialSiembra varchar(35), CrianzaAnimales varchar(10),
+								Fecha varchar (20), CantidadTerreno float,Fertilizantes int, 
+								MaterialSiembra varchar(35), CrianzaAnimales int,
 								ControlPlagas varchar(35), ResumenInspeccion varchar(200));
+
 							
 --Creamos la tabla Centros de Acopio. Este es el almacen que recibe el cacao de los socios
 create table CentrosAcopio(CentrosAcpId int primary key identity, Nombre varchar(50), Direccion varchar(40), 
-								 codigo int, Encargado varchar(50), Fecha varchar(10),
-								 Sacos int, Kilos float, Cajas float, Observacion varchar(200), 
-								 EntregadoPor varchar(50), RecibidoPor varchar(50));
+								 Fecha varchar(10),Sacos int, Kilos float, Cajas float, 
+								 Observacion varchar(200), EntregadoPor varchar(50), RecibidoPor varchar(50));
 							 
 --Creamos la tabla Control de lotes para llevar controlada la cantidad de cacao que se va a exportar
 create table ControlLotes(ControlLotesId int primary key identity, CentrosAcpId int References CentrosAcopio(CentrosAcpId), 

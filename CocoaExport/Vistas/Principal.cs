@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using CocoaExport.Vistas;
 namespace CocoaExport
 {
     public partial class Principal : Form
@@ -20,6 +20,12 @@ namespace CocoaExport
         private void Principal_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void RegistrarSbutton_Click(object sender, EventArgs e)
+        {
+            RegistroSocios registro = new RegistroSocios();
+            registro.Show();
         }
     }
 }

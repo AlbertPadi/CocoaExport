@@ -24,7 +24,8 @@ namespace CocoaExport.Vistas
 
         private void Entrarbutton_Click(object sender, EventArgs e)
         {
-
+            Principal principal = new Principal();
+            principal.Show();
         }
     }
 }
