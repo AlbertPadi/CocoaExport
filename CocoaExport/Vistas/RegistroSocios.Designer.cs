@@ -160,7 +160,7 @@
             // button2
             // 
             this.button2.Image = global::CocoaExport.Properties.Resources.plus_32;
-            this.button2.Location = new System.Drawing.Point(235, 256);
+            this.button2.Location = new System.Drawing.Point(234, 256);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(104, 34);
             this.button2.TabIndex = 15;
