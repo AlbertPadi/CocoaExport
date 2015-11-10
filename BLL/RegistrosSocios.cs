@@ -54,7 +54,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-                retorno = conexion.Ejecutar(String.Format("Update Socios Set Nombre='{0}', Apellido='{1}', Direccion='{2}', Cedula={3}, Codigo={4}, Hectareas={5}, Fertilizantes={6} where SocioId={7}", this.Nombre, this.Apellido, this.Direccion, this.Cedula, this.Codigo, this.Hectareas, this.Fertilizantes, this.SocioId));
+                retorno = conexion.Ejecutar(String.Format("Update Socios Set Nombre='{0}', Apellido='{1}', Direccion='{2}', Cedula={3}, Hectareas={4}, Fertilizantes={5} where SocioId={6}", this.Nombre, this.Apellido, this.Direccion, this.Cedula, this.Hectareas, this.Fertilizantes, this.SocioId));
             }
             catch (Exception ex)
             {

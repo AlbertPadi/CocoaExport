@@ -46,17 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Vistas\CentrosAcopio.cs">
+    <Compile Include="Vistas\CentrosdeAcopio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\CentrosAcopio.Designer.cs">
-      <DependentUpon>CentrosAcopio.cs</DependentUpon>
+    <Compile Include="Vistas\CentrosdeAcopio.Designer.cs">
+      <DependentUpon>CentrosdeAcopio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\ControlLotes.cs">
+    <Compile Include="Vistas\ControldeLotes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\ControlLotes.Designer.cs">
-      <DependentUpon>ControlLotes.cs</DependentUpon>
+    <Compile Include="Vistas\ControldeLotes.Designer.cs">
+      <DependentUpon>ControldeLotes.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\DestinosExportes.cs">
       <SubType>Form</SubType>
@@ -102,11 +102,11 @@
     <Compile Include="Vistas\RegistroUsuarios.Designer.cs">
       <DependentUpon>RegistroUsuarios.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Vistas\CentrosAcopio.resx">
-      <DependentUpon>CentrosAcopio.cs</DependentUpon>
+    <EmbeddedResource Include="Vistas\CentrosdeAcopio.resx">
+      <DependentUpon>CentrosdeAcopio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\ControlLotes.resx">
-      <DependentUpon>ControlLotes.cs</DependentUpon>
+    <EmbeddedResource Include="Vistas\ControldeLotes.resx">
+      <DependentUpon>ControldeLotes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\DestinosExportes.resx">
       <DependentUpon>DestinosExportes.cs</DependentUpon>

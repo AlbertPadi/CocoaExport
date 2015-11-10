@@ -24,6 +24,7 @@ namespace CocoaExport.Vistas
         {
             if (CodigotextBox.Text.Length == 0)
             {
+                registro.SocioId = Convert.ToInt32(CodigotextBox.Text);
 
                 registro.Nombre = NombretextBox.Text;
                 registro.Apellido = ApellidotextBox.Text;
@@ -48,13 +49,21 @@ namespace CocoaExport.Vistas
                     MessageBox.Show("Se guardaron los datos!");
                 }
                 else
-                {
+                { 
                     MessageBox.Show("No se han guardado los datos!");
                 }
 
             }
             else
             {
+                registro.SocioId = Convert.ToInt32(CodigotextBox.Text);
+
+                registro.Nombre = NombretextBox.Text;
+                registro.Apellido = ApellidotextBox.Text;
+                registro.Direccion = DirecciontextBox.Text;
+                registro.Cedula = Convert.ToDouble(CedulatextBox.Text);
+
+                registro.Hectareas = Convert.ToDouble(HectareastextBox.Text);
                 registro.Editar();
             }
         }

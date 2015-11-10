@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace CocoaExport.Vistas
 {
-    public partial class CentrosAcopio : Form
+    public partial class CentrosdeAcopio : Form
     {
-        public CentrosAcopio()
+        public CentrosdeAcopio()
         {
             InitializeComponent();
+        }
+
+        private void CentrosAcopio_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

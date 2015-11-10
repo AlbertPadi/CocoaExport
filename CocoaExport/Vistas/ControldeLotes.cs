@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CocoaExport.Vistas
 {
-    public partial class ControlLotes : Form
+    public partial class ControldeLotes : Form
     {
-        public ControlLotes()
+        public ControldeLotes()
         {
             InitializeComponent();
         }
