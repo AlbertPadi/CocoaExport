@@ -108,5 +108,17 @@ namespace CocoaExport.Vistas
             
             
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            NombretextBox.Clear();
+            ApellidotextBox.Clear();
+            DirecciontextBox.Clear();
+            CedulatextBox.Clear();
+            CodigotextBox.Clear();
+            HectareastextBox.Clear();
+            FertNoradioButton.Checked = false;
+            FertSiradioButton.Checked = false;
+        }
     }
 }
