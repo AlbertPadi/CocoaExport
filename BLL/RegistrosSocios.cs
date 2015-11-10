@@ -66,12 +66,38 @@ namespace BLL
 
         public override bool Borrar()
         {
-            throw new NotImplementedException();
+            bool retorno = false;
+            try
+            {
+                retorno = conexion.Ejecutar(String.Format("Delete from Socios where SocioId={0}", this.SocioId));
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            return retorno;
         }
 
         public override bool Buscar(int IdBuscado)
         {
-            throw new NotImplementedException();
+            DataTable dt;
+            
+                dt = conexion.getDatos(String.Format("select *from Socios where SocioId= {0}", IdBuscado));
+                if (dt.Rows.Count > 0)
+                {
+                    this.Nombre = dt.Rows[0]["Nombre"].ToString();
+                    this.Apellido = dt.Rows[0]["Apellido"].ToString();
+                    this.Direccion = dt.Rows[0]["Direccion"].ToString();
+                    //this.Cedula = (double)dt.Rows[0]["Cedula"];
+                    this.Codigo = (int)dt.Rows[0]["Codigo"];
+                    this.Hectareas = (double)dt.Rows[0]["Hectareas"];
+                    this.Fertilizantes = (int)dt.Rows[0]["Fertilizantes"];
+                }
+
+            return dt.Rows.Count > 0;
+            
+
         }
 
         public override DataTable Listar(string campos, string Filtro)

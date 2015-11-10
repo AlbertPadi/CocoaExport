@@ -13,6 +13,7 @@ namespace CocoaExport.Vistas
     public partial class RegistroSocios : Form
     {
         int n;
+        int IdBuscado;
         BLL.RegistrosSocios registro = new BLL.RegistrosSocios();
         public RegistroSocios()
         {
@@ -24,8 +25,6 @@ namespace CocoaExport.Vistas
         {
             if (CodigotextBox.Text.Length == 0)
             {
-                registro.SocioId = Convert.ToInt32(CodigotextBox.Text);
-
                 registro.Nombre = NombretextBox.Text;
                 registro.Apellido = ApellidotextBox.Text;
                 registro.Direccion = DirecciontextBox.Text;
@@ -65,7 +64,49 @@ namespace CocoaExport.Vistas
 
                 registro.Hectareas = Convert.ToDouble(HectareastextBox.Text);
                 registro.Editar();
+
+                if (registro.Editar())
+                {
+                    MessageBox.Show("Se han actualizado los datos!");
+                }
+                else
+                {
+                    MessageBox.Show("No se han guardado los datos!");
+                }
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            registro.SocioId = Convert.ToInt32(CodigotextBox.Text);
+            registro.Borrar();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            IdBuscado = Convert.ToInt32(CodigotextBox.Text);
+            if (registro.Buscar(IdBuscado))
+            {
+                registro.SocioId = IdBuscado;
+                NombretextBox.Text = registro.Nombre;
+                ApellidotextBox.Text = registro.Apellido;
+                DirecciontextBox.Text = registro.Direccion;
+                CedulatextBox.Text = registro.Cedula.ToString();
+                CodigotextBox.Text = registro.Codigo.ToString();
+                HectareastextBox.Text = registro.Hectareas.ToString();
+
+                if (registro.Fertilizantes == 1)
+                {
+                    FertSiradioButton.Checked = true;
+                }
+                if (registro.Fertilizantes == 0)
+                {
+                    FertNoradioButton.Checked = false;
+                }
+            }
+            
+            
+            
         }
     }
 }
