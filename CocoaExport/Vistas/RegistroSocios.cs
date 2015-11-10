@@ -13,7 +13,7 @@ namespace CocoaExport.Vistas
     public partial class RegistroSocios : Form
     {
         int n;
-        BLL.RegistroSocios registro = new BLL.RegistroSocios();
+        BLL.RegistrosSocios registro = new BLL.RegistrosSocios();
         public RegistroSocios()
         {
             
