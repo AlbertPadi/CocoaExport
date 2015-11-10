@@ -124,6 +124,7 @@
             this.Registrarbutton.Size = new System.Drawing.Size(85, 39);
             this.Registrarbutton.TabIndex = 24;
             this.Registrarbutton.UseVisualStyleBackColor = true;
+            this.Registrarbutton.Click += new System.EventHandler(this.Registrarbutton_Click);
             // 
             // Lotesbutton
             // 

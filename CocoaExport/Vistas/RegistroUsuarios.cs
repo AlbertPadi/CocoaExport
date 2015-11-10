@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
 
 namespace CocoaExport.Vistas
 {
@@ -20,6 +21,31 @@ namespace CocoaExport.Vistas
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void RegistroUsuarios_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Guardarbutton_Click(object sender, EventArgs e)
+        {
+            RegistroDeUsuarios Regis = new RegistroDeUsuarios();
+            Regis.Nombre = NombretextBox.Text;
+            Regis.Apellido = ApellidotextBox.Text;
+            Regis.Direccion = DirecciontextBox.Text;
+            Regis.NombreUsuario = NomUsuariotextBox.Text;
+            Regis.Contrasena = ContraseñatextBox.Text;
+            Regis.Insertar();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            NombretextBox.Clear();
+            ApellidotextBox.Clear();
+            DirecciontextBox.Clear();
+            NomUsuariotextBox.Clear();
+            ContraseñatextBox.Clear();
         }
     }
 }

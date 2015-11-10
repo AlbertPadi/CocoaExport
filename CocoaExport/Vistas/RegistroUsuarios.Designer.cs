@@ -45,6 +45,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
+            this.Buscarbutton = new System.Windows.Forms.Button();
+            this.Buscarlabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -137,7 +139,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(212, 187);
+            this.label6.Location = new System.Drawing.Point(47, 187);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 16);
             this.label6.TabIndex = 13;
@@ -147,7 +149,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(368, 187);
+            this.label7.Location = new System.Drawing.Point(210, 187);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 16);
             this.label7.TabIndex = 14;
@@ -175,20 +177,41 @@
             // button1
             // 
             this.button1.Image = global::CocoaExport.Properties.Resources.plus_32;
-            this.button1.Location = new System.Drawing.Point(349, 150);
+            this.button1.Location = new System.Drawing.Point(213, 150);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 34);
             this.button1.TabIndex = 11;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Guardarbutton
             // 
             this.Guardarbutton.Image = global::CocoaExport.Properties.Resources._1441773161_save;
-            this.Guardarbutton.Location = new System.Drawing.Point(196, 150);
+            this.Guardarbutton.Location = new System.Drawing.Point(47, 150);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(95, 34);
             this.Guardarbutton.TabIndex = 5;
             this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
+            // 
+            // Buscarbutton
+            // 
+            this.Buscarbutton.Image = global::CocoaExport.Properties.Resources.Inspection_128;
+            this.Buscarbutton.Location = new System.Drawing.Point(360, 150);
+            this.Buscarbutton.Name = "Buscarbutton";
+            this.Buscarbutton.Size = new System.Drawing.Size(95, 34);
+            this.Buscarbutton.TabIndex = 16;
+            this.Buscarbutton.UseVisualStyleBackColor = true;
+            // 
+            // Buscarlabel
+            // 
+            this.Buscarlabel.AutoSize = true;
+            this.Buscarlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Buscarlabel.Location = new System.Drawing.Point(357, 187);
+            this.Buscarlabel.Name = "Buscarlabel";
+            this.Buscarlabel.Size = new System.Drawing.Size(56, 16);
+            this.Buscarlabel.TabIndex = 17;
+            this.Buscarlabel.Text = "Buscar";
             // 
             // RegistroUsuarios
             // 
@@ -196,6 +219,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Olive;
             this.ClientSize = new System.Drawing.Size(673, 234);
+            this.Controls.Add(this.Buscarlabel);
+            this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -215,6 +240,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegistroUsuarios";
             this.Text = "RegistroUsuarios";
+            this.Load += new System.EventHandler(this.RegistroUsuarios_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,5 +264,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button Buscarbutton;
+        private System.Windows.Forms.Label Buscarlabel;
     }
 }
