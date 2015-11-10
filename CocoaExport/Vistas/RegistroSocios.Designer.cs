@@ -50,6 +50,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.FertilizantesgroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -158,7 +160,7 @@
             // button2
             // 
             this.button2.Image = global::CocoaExport.Properties.Resources.plus_32;
-            this.button2.Location = new System.Drawing.Point(282, 254);
+            this.button2.Location = new System.Drawing.Point(235, 256);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(104, 34);
             this.button2.TabIndex = 15;
@@ -167,7 +169,7 @@
             // button3
             // 
             this.button3.Image = global::CocoaExport.Properties.Resources.trash_circle_red_32;
-            this.button3.Location = new System.Drawing.Point(422, 254);
+            this.button3.Location = new System.Drawing.Point(375, 256);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(104, 34);
             this.button3.TabIndex = 16;
@@ -213,7 +215,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(167, 291);
+            this.label6.Location = new System.Drawing.Point(120, 293);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 16);
             this.label6.TabIndex = 20;
@@ -223,7 +225,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(308, 291);
+            this.label8.Location = new System.Drawing.Point(261, 293);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 16);
             this.label8.TabIndex = 21;
@@ -233,7 +235,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(442, 291);
+            this.label9.Location = new System.Drawing.Point(395, 293);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(64, 16);
             this.label9.TabIndex = 22;
@@ -242,12 +244,31 @@
             // button1
             // 
             this.button1.Image = global::CocoaExport.Properties.Resources._1441773161_save;
-            this.button1.Location = new System.Drawing.Point(147, 254);
+            this.button1.Location = new System.Drawing.Point(100, 256);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 34);
             this.button1.TabIndex = 7;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(535, 293);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(56, 16);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "Buscar";
+            // 
+            // button4
+            // 
+            this.button4.Image = global::CocoaExport.Properties.Resources._1443814210_fine_print;
+            this.button4.Location = new System.Drawing.Point(515, 256);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(104, 34);
+            this.button4.TabIndex = 23;
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // RegistroSocios
             // 
@@ -255,6 +276,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Olive;
             this.ClientSize = new System.Drawing.Size(691, 333);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
@@ -307,5 +330,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button4;
     }
 }
