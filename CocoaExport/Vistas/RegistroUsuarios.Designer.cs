@@ -42,11 +42,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.Buscarlabel = new System.Windows.Forms.Label();
+            this.Buscarbutton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
-            this.Buscarbutton = new System.Windows.Forms.Button();
-            this.Buscarlabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -165,6 +165,25 @@
             this.label8.TabIndex = 15;
             this.label8.Text = "Eliminar";
             // 
+            // Buscarlabel
+            // 
+            this.Buscarlabel.AutoSize = true;
+            this.Buscarlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Buscarlabel.Location = new System.Drawing.Point(357, 187);
+            this.Buscarlabel.Name = "Buscarlabel";
+            this.Buscarlabel.Size = new System.Drawing.Size(56, 16);
+            this.Buscarlabel.TabIndex = 17;
+            this.Buscarlabel.Text = "Buscar";
+            // 
+            // Buscarbutton
+            // 
+            this.Buscarbutton.Image = global::CocoaExport.Properties.Resources.Inspection_128;
+            this.Buscarbutton.Location = new System.Drawing.Point(360, 150);
+            this.Buscarbutton.Name = "Buscarbutton";
+            this.Buscarbutton.Size = new System.Drawing.Size(95, 34);
+            this.Buscarbutton.TabIndex = 16;
+            this.Buscarbutton.UseVisualStyleBackColor = true;
+            // 
             // button2
             // 
             this.button2.Image = global::CocoaExport.Properties.Resources.trash_circle_red_32;
@@ -194,30 +213,11 @@
             this.Guardarbutton.UseVisualStyleBackColor = true;
             this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
-            // Buscarbutton
-            // 
-            this.Buscarbutton.Image = global::CocoaExport.Properties.Resources.Inspection_128;
-            this.Buscarbutton.Location = new System.Drawing.Point(360, 150);
-            this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(95, 34);
-            this.Buscarbutton.TabIndex = 16;
-            this.Buscarbutton.UseVisualStyleBackColor = true;
-            // 
-            // Buscarlabel
-            // 
-            this.Buscarlabel.AutoSize = true;
-            this.Buscarlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Buscarlabel.Location = new System.Drawing.Point(357, 187);
-            this.Buscarlabel.Name = "Buscarlabel";
-            this.Buscarlabel.Size = new System.Drawing.Size(56, 16);
-            this.Buscarlabel.TabIndex = 17;
-            this.Buscarlabel.Text = "Buscar";
-            // 
             // RegistroUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Olive;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
             this.ClientSize = new System.Drawing.Size(673, 234);
             this.Controls.Add(this.Buscarlabel);
             this.Controls.Add(this.Buscarbutton);

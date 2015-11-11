@@ -266,11 +266,11 @@
             this.Guardarbutton.TabIndex = 9;
             this.Guardarbutton.UseVisualStyleBackColor = true;
             // 
-            // CentrosAcopio
+            // CentrosdeAcopio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Olive;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
             this.ClientSize = new System.Drawing.Size(722, 343);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
@@ -297,7 +297,7 @@
             this.Controls.Add(this.NombretextBox);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "CentrosAcopio";
+            this.Name = "CentrosdeAcopio";
             this.Text = "Centros Acopio";
             this.Load += new System.EventHandler(this.CentrosAcopio_Load);
             this.ResumeLayout(false);

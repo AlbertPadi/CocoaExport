@@ -50,9 +50,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.Eliminarbutton = new System.Windows.Forms.Button();
-            this.Nuevobutton = new System.Windows.Forms.Button();
-            this.Guardarbutton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -60,6 +57,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.Eliminarbutton = new System.Windows.Forms.Button();
+            this.Nuevobutton = new System.Windows.Forms.Button();
+            this.Guardarbutton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -247,33 +247,6 @@
             this.label13.TabIndex = 38;
             this.label13.Text = "Guardar";
             // 
-            // Eliminarbutton
-            // 
-            this.Eliminarbutton.Image = global::CocoaExport.Properties.Resources.trash_circle_red_32;
-            this.Eliminarbutton.Location = new System.Drawing.Point(244, 390);
-            this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(104, 34);
-            this.Eliminarbutton.TabIndex = 10;
-            this.Eliminarbutton.UseVisualStyleBackColor = true;
-            // 
-            // Nuevobutton
-            // 
-            this.Nuevobutton.Image = global::CocoaExport.Properties.Resources.plus_32;
-            this.Nuevobutton.Location = new System.Drawing.Point(124, 390);
-            this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(104, 34);
-            this.Nuevobutton.TabIndex = 5;
-            this.Nuevobutton.UseVisualStyleBackColor = true;
-            // 
-            // Guardarbutton
-            // 
-            this.Guardarbutton.Image = global::CocoaExport.Properties.Resources._1441773161_save;
-            this.Guardarbutton.Location = new System.Drawing.Point(3, 390);
-            this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(104, 34);
-            this.Guardarbutton.TabIndex = 4;
-            this.Guardarbutton.UseVisualStyleBackColor = true;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label6);
@@ -355,11 +328,38 @@
             this.button3.TabIndex = 4;
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // ControlLotes
+            // Eliminarbutton
+            // 
+            this.Eliminarbutton.Image = global::CocoaExport.Properties.Resources.trash_circle_red_32;
+            this.Eliminarbutton.Location = new System.Drawing.Point(244, 390);
+            this.Eliminarbutton.Name = "Eliminarbutton";
+            this.Eliminarbutton.Size = new System.Drawing.Size(104, 34);
+            this.Eliminarbutton.TabIndex = 10;
+            this.Eliminarbutton.UseVisualStyleBackColor = true;
+            // 
+            // Nuevobutton
+            // 
+            this.Nuevobutton.Image = global::CocoaExport.Properties.Resources.plus_32;
+            this.Nuevobutton.Location = new System.Drawing.Point(124, 390);
+            this.Nuevobutton.Name = "Nuevobutton";
+            this.Nuevobutton.Size = new System.Drawing.Size(104, 34);
+            this.Nuevobutton.TabIndex = 5;
+            this.Nuevobutton.UseVisualStyleBackColor = true;
+            // 
+            // Guardarbutton
+            // 
+            this.Guardarbutton.Image = global::CocoaExport.Properties.Resources._1441773161_save;
+            this.Guardarbutton.Location = new System.Drawing.Point(3, 390);
+            this.Guardarbutton.Name = "Guardarbutton";
+            this.Guardarbutton.Size = new System.Drawing.Size(104, 34);
+            this.Guardarbutton.TabIndex = 4;
+            this.Guardarbutton.UseVisualStyleBackColor = true;
+            // 
+            // ControldeLotes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Olive;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
             this.ClientSize = new System.Drawing.Size(756, 495);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label11);
@@ -379,7 +379,7 @@
             this.Controls.Add(this.NoAlmacentextBox);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "ControlLotes";
+            this.Name = "ControldeLotes";
             this.Text = "Control Lotes";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
