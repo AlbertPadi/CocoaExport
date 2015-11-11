@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 
+//"Data Source=APACHEW-PC\\SQLEXPRESS;Initial Catalog=CocoaExport;Integrated Security=True"
 namespace DAL
 {
     public class Conexion
@@ -15,7 +16,7 @@ namespace DAL
 
         public Conexion()
         {
-            con = new SqlConnection("Data Source=GEORGE-PC\\SQLEXPRESS;Initial Catalog=CocoaExport;Integrated Security=True");
+            con = new SqlConnection("Data Source=APACHEW-PC\\SQLEXPRESS;Initial Catalog=CocoaExport;Integrated Security=True");
             cmd = new SqlCommand();
         }
 

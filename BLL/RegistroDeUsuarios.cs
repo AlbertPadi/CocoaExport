@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DAL;
 using System.Data;
+using DAL;
+
 
 namespace BLL
 {
     public class RegistroDeUsuarios : ClaseMaestra
     {
-        Conexion con = new Conexion();
+        Conexion conexion = new Conexion();
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Direccion { get; set; }
@@ -37,9 +38,27 @@ namespace BLL
             this.Contrasena = contrasena;
             this.UsuarioId = usuarioid;
         }
+
+        public bool Login()
+        {
+            DataTable dt = new DataTable ();
+            try
+            {
+                dt = conexion.getDatos(String.Format("Select NombreUsuario, Contrasena from Usuarios where NombreUsuario='{0}' and Contrasena='{1}'", this.NombreUsuario, this.Contrasena));
+                this.NombreUsuario = dt.Rows[0]["NombreUsuario"].ToString();
+                this.Contrasena = dt.Rows[0]["Contrasena"].ToString();
+            }
+            catch (Exception)
+            {
+                
+                return false;
+            }
+            return true;
+
+        }
         public override bool Borrar()
         {
-            return con.Ejecutar(String.Format("Delete *From where UsuarioId= {0}", this.UsuarioId));
+            return conexion.Ejecutar(String.Format("Delete *From where UsuarioId= {0}", this.UsuarioId));
         }
 
         public override bool Buscar(int IdBuscado)
@@ -51,7 +70,7 @@ namespace BLL
         {
             bool retorno = false;
 
-            retorno = con.Ejecutar(String.Format("Update Usuarios Set Nombre='{0}', Apellido='{1}', Direccion='{2}', NombreUsuario='{3}', Contraseña='{4}' where UsuarioId={5}", this.Nombre, this.Apellido, this.Direccion, this.NombreUsuario, this.Contrasena));
+            retorno = conexion.Ejecutar(String.Format("Update Usuarios Set Nombre='{0}', Apellido='{1}', Direccion='{2}', NombreUsuario='{3}', Contraseña='{4}' where UsuarioId={5}", this.Nombre, this.Apellido, this.Direccion, this.NombreUsuario, this.Contrasena));
             return retorno;
         }
 
@@ -60,7 +79,7 @@ namespace BLL
               bool retorno = false;
             try
             {
-               retorno = con.Ejecutar(String.Format("Insert Into Usuarios(Nombre, Apellido, Direccion, NombreUsuario, Contraseña) Values('{0}', '{1}', '{2}', '{3}', '{4}')", this.Nombre, this.Apellido, this.Direccion, this.NombreUsuario, this.Contrasena));
+               retorno = conexion.Ejecutar(String.Format("Insert Into Usuarios(Nombre, Apellido, Direccion, NombreUsuario, Contraseña) Values('{0}', '{1}', '{2}', '{3}', '{4}')", this.Nombre, this.Apellido, this.Direccion, this.NombreUsuario, this.Contrasena));
             }
             catch (Exception ex)
             {

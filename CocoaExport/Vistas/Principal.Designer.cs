@@ -29,195 +29,162 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.Exportacionbutton = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Registrarbutton = new System.Windows.Forms.Button();
-            this.Lotesbutton = new System.Windows.Forms.Button();
-            this.CentrosAcpbutton = new System.Windows.Forms.Button();
-            this.Inspeccionesbutton = new System.Windows.Forms.Button();
-            this.RegistrarSbutton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroSociosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inspeccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.controlDeLotesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configuracionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(363, 331);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 16);
-            this.label6.TabIndex = 25;
-            this.label6.Text = "Registrar";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(627, 245);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 16);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "Exportacion";
-            // 
-            // Exportacionbutton
-            // 
-            this.Exportacionbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Exportacionbutton.Location = new System.Drawing.Point(629, 203);
-            this.Exportacionbutton.Name = "Exportacionbutton";
-            this.Exportacionbutton.Size = new System.Drawing.Size(85, 39);
-            this.Exportacionbutton.TabIndex = 22;
-            this.Exportacionbutton.Text = "EX";
-            this.Exportacionbutton.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(481, 245);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(121, 16);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "Control de Lotes";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(343, 245);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 16);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "Centros Acopio";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(211, 245);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 16);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Inspecciones";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(71, 245);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 16);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Registrar Socios";
-            // 
-            // Registrarbutton
-            // 
-            this.Registrarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Registrarbutton.Image = global::CocoaExport.Properties.Resources.list_add_user;
-            this.Registrarbutton.Location = new System.Drawing.Point(356, 289);
-            this.Registrarbutton.Name = "Registrarbutton";
-            this.Registrarbutton.Size = new System.Drawing.Size(85, 39);
-            this.Registrarbutton.TabIndex = 24;
-            this.Registrarbutton.UseVisualStyleBackColor = true;
-            this.Registrarbutton.Click += new System.EventHandler(this.Registrarbutton_Click);
-            // 
-            // Lotesbutton
-            // 
-            this.Lotesbutton.Image = global::CocoaExport.Properties.Resources.Carpeta;
-            this.Lotesbutton.Location = new System.Drawing.Point(498, 203);
-            this.Lotesbutton.Name = "Lotesbutton";
-            this.Lotesbutton.Size = new System.Drawing.Size(85, 39);
-            this.Lotesbutton.TabIndex = 20;
-            this.Lotesbutton.UseVisualStyleBackColor = true;
-            // 
-            // CentrosAcpbutton
-            // 
-            this.CentrosAcpbutton.Image = global::CocoaExport.Properties.Resources.Home;
-            this.CentrosAcpbutton.Location = new System.Drawing.Point(356, 203);
-            this.CentrosAcpbutton.Name = "CentrosAcpbutton";
-            this.CentrosAcpbutton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.CentrosAcpbutton.Size = new System.Drawing.Size(85, 39);
-            this.CentrosAcpbutton.TabIndex = 18;
-            this.CentrosAcpbutton.UseVisualStyleBackColor = true;
-            // 
-            // Inspeccionesbutton
-            // 
-            this.Inspeccionesbutton.Image = global::CocoaExport.Properties.Resources.Inspection_128;
-            this.Inspeccionesbutton.Location = new System.Drawing.Point(216, 203);
-            this.Inspeccionesbutton.Name = "Inspeccionesbutton";
-            this.Inspeccionesbutton.Size = new System.Drawing.Size(85, 39);
-            this.Inspeccionesbutton.TabIndex = 16;
-            this.Inspeccionesbutton.UseVisualStyleBackColor = true;
-            // 
-            // RegistrarSbutton
-            // 
-            this.RegistrarSbutton.Image = global::CocoaExport.Properties.Resources._1444595857_add_user;
-            this.RegistrarSbutton.Location = new System.Drawing.Point(94, 203);
-            this.RegistrarSbutton.Name = "RegistrarSbutton";
-            this.RegistrarSbutton.Size = new System.Drawing.Size(85, 39);
-            this.RegistrarSbutton.TabIndex = 14;
-            this.RegistrarSbutton.UseVisualStyleBackColor = true;
-            this.RegistrarSbutton.Click += new System.EventHandler(this.RegistrarSbutton_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CocoaExport.Properties.Resources.img14132485a794a2fb51;
-            this.pictureBox1.Location = new System.Drawing.Point(-4, -3);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 23);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(815, 200);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.archivoToolStripMenuItem,
+            this.registroToolStripMenuItem,
+            this.inspeccionesToolStripMenuItem,
+            this.controlDeLotesToolStripMenuItem,
+            this.exportacionToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(807, 24);
+            this.menuStrip1.TabIndex = 14;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // archivoToolStripMenuItem
+            // 
+            this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nuevoToolStripMenuItem,
+            this.salirToolStripMenuItem,
+            this.configuracionToolStripMenuItem});
+            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.archivoToolStripMenuItem.Text = "Archivo";
+            // 
+            // registroToolStripMenuItem
+            // 
+            this.registroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registroSociosToolStripMenuItem,
+            this.registroUsuariosToolStripMenuItem});
+            this.registroToolStripMenuItem.Name = "registroToolStripMenuItem";
+            this.registroToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.registroToolStripMenuItem.Text = "Registro";
+            // 
+            // registroSociosToolStripMenuItem
+            // 
+            this.registroSociosToolStripMenuItem.Name = "registroSociosToolStripMenuItem";
+            this.registroSociosToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.registroSociosToolStripMenuItem.Text = "Registro Socios";
+            this.registroSociosToolStripMenuItem.Click += new System.EventHandler(this.registroSociosToolStripMenuItem_Click);
+            // 
+            // inspeccionesToolStripMenuItem
+            // 
+            this.inspeccionesToolStripMenuItem.Name = "inspeccionesToolStripMenuItem";
+            this.inspeccionesToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.inspeccionesToolStripMenuItem.Text = "Inspecciones";
+            // 
+            // registroUsuariosToolStripMenuItem
+            // 
+            this.registroUsuariosToolStripMenuItem.Name = "registroUsuariosToolStripMenuItem";
+            this.registroUsuariosToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.registroUsuariosToolStripMenuItem.Text = "Registro Usuarios";
+            this.registroUsuariosToolStripMenuItem.Click += new System.EventHandler(this.registroUsuariosToolStripMenuItem_Click);
+            // 
+            // controlDeLotesToolStripMenuItem
+            // 
+            this.controlDeLotesToolStripMenuItem.Name = "controlDeLotesToolStripMenuItem";
+            this.controlDeLotesToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
+            this.controlDeLotesToolStripMenuItem.Text = "Control de Lotes";
+            // 
+            // exportacionToolStripMenuItem
+            // 
+            this.exportacionToolStripMenuItem.Name = "exportacionToolStripMenuItem";
+            this.exportacionToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
+            this.exportacionToolStripMenuItem.Text = "Exportacion";
+            // 
+            // nuevoToolStripMenuItem
+            // 
+            this.nuevoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sistemaToolStripMenuItem});
+            this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.nuevoToolStripMenuItem.Text = "Configuracion";
+            this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salirToolStripMenuItem.Text = "Ver usuarios";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
+            // configuracionToolStripMenuItem
+            // 
+            this.configuracionToolStripMenuItem.Name = "configuracionToolStripMenuItem";
+            this.configuracionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.configuracionToolStripMenuItem.Text = "Salir";
+            this.configuracionToolStripMenuItem.Click += new System.EventHandler(this.configuracionToolStripMenuItem_Click);
+            // 
+            // sistemaToolStripMenuItem
+            // 
+            this.sistemaToolStripMenuItem.Name = "sistemaToolStripMenuItem";
+            this.sistemaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sistemaToolStripMenuItem.Text = "Sistema";
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Olive;
-            this.ClientSize = new System.Drawing.Size(807, 351);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.Registrarbutton);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.Exportacionbutton);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.Lotesbutton);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.CentrosAcpbutton);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.Inspeccionesbutton);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.RegistrarSbutton);
+            this.ClientSize = new System.Drawing.Size(807, 385);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Principal";
             this.Text = "Principal";
             this.Load += new System.EventHandler(this.Principal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button Registrarbutton;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button Exportacionbutton;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button Lotesbutton;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button CentrosAcpbutton;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button Inspeccionesbutton;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button RegistrarSbutton;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registroSociosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registroUsuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem inspeccionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem controlDeLotesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exportacionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nuevoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sistemaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem configuracionToolStripMenuItem;
     }
 }
 

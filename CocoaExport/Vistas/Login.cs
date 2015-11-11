@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BLL;
 namespace CocoaExport.Vistas
 {
     public partial class Login : Form
     {
+        RegistroDeUsuarios registro = new RegistroDeUsuarios();
+        
         public Login()
         {
             InitializeComponent();
@@ -24,8 +26,38 @@ namespace CocoaExport.Vistas
 
         private void Entrarbutton_Click(object sender, EventArgs e)
         {
-            Principal principal = new Principal();
-            principal.Show();
+            registro.NombreUsuario = NombretextBox.Text;
+            registro.Contrasena = ContrasenatextBox.Text;
+
+            if (registro.Login())
+            {
+                if (NombretextBox.Text == registro.NombreUsuario && ContrasenatextBox.Text == registro.Contrasena)
+                {
+                    Principal principal = new Principal();
+                    principal.ShowDialog();
+                }
+                
+            }
+            else 
+            {
+
+                    errorProvider.SetError(NombretextBox, "Usuario Incorrecto");
+                    errorProvider.SetError(ContrasenatextBox, "Contrasena Incorrecta");
+
+
+            }
+
+        }
+
+        private void Nuevobutton_Click(object sender, EventArgs e)
+        {
+            NombretextBox.Clear();
+            ContrasenatextBox.Clear();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
