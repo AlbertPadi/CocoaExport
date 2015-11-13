@@ -59,5 +59,32 @@ namespace CocoaExport.Vistas
         {
 
         }
+
+        private void ContrasenatextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+               registro.NombreUsuario = NombretextBox.Text;
+                registro.Contrasena = ContrasenatextBox.Text;
+
+                if (registro.Login())
+                {
+                    if (NombretextBox.Text == registro.NombreUsuario && ContrasenatextBox.Text == registro.Contrasena)
+                    {
+                        Principal principal = new Principal();
+                        principal.ShowDialog();
+                    }
+
+                }
+                else
+                {
+
+                    errorProvider.SetError(NombretextBox, "Usuario Incorrecto");
+                    errorProvider.SetError(ContrasenatextBox, "Contrasena Incorrecta");
+
+
+                }
+            }
+        }
     }
 }

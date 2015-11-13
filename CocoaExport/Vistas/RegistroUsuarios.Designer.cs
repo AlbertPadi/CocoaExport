@@ -139,7 +139,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(47, 187);
+            this.label6.Location = new System.Drawing.Point(67, 187);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 16);
             this.label6.TabIndex = 13;
@@ -149,7 +149,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(210, 187);
+            this.label7.Location = new System.Drawing.Point(237, 187);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 16);
             this.label7.TabIndex = 14;
@@ -169,7 +169,7 @@
             // 
             this.Buscarlabel.AutoSize = true;
             this.Buscarlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Buscarlabel.Location = new System.Drawing.Point(357, 187);
+            this.Buscarlabel.Location = new System.Drawing.Point(378, 187);
             this.Buscarlabel.Name = "Buscarlabel";
             this.Buscarlabel.Size = new System.Drawing.Size(56, 16);
             this.Buscarlabel.TabIndex = 17;
