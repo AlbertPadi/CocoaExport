@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
+
 namespace CocoaExport.Vistas
 {
     public partial class RegistroSocios : Form
@@ -119,6 +120,11 @@ namespace CocoaExport.Vistas
             HectareastextBox.Clear();
             FertNoradioButton.Checked = false;
             FertSiradioButton.Checked = false;
+        }
+
+        private void RegistroSocios_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

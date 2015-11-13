@@ -10,7 +10,8 @@ create table Socios(SocioId int primary key identity, Nombre varchar(50), Apelli
 								Direccion varchar(40),Cedula integer, Certificacion Varchar(40), Codigo int, CantidadTareas float, 
 								Fertilizantes int);
 					
-create table Certificaciones(CertificacionId int primary key identity, SocioId int References Socios(SocioId), Descripcion varchar(50));
+create table Certificaciones(CertificacionId int primary key identity, Descripcion varchar(50));
+
 							
 							
 create table Inspecciones(InspeccionesId int primary key identity, SocioId int References Socios(SocioId), 
@@ -36,4 +37,6 @@ create table DestinosExportes(DestinosId int primary key identity, Pais varchar(
 create table Exportaciones(ExportacionId int primary key identity, DestinoId int, 
 								CantidadToneladas float, Certificacion varchar(40), Fecha varchar(20), 
 								LotesExportados float, Detalle varchar(300));
+
+								Insert into Usuarios(NombreUsuario,Contraseña) values('Melvin','1234');
 

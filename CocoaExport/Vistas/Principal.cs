@@ -74,5 +74,11 @@ namespace CocoaExport
         {
             this.Close();
         }
+
+        private void registroCertificacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Certificaciones registro = new Certificaciones();
+            registro.Show();
+        }
     }
 }
