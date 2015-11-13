@@ -15,7 +15,7 @@ namespace BLL
         public string Apellido { get; set; }
         public string Direccion { get; set; }
         public double Cedula { get; set; }
-        public int Codigo { get; set; }
+        public int CertificacionId { get; set; }
         public double Hectareas { get; set; }
         public int Fertilizantes { get; set; }
         public int SocioId { get; set; }
@@ -27,7 +27,7 @@ namespace BLL
             this.Apellido = "";
             this.Direccion = "";
             this.Cedula = 0;
-            this.Codigo = 0;
+            this.CertificacionId = 0;
             this.Hectareas = 0;
             this.Fertilizantes = 0;
             this.SocioId = 0;
@@ -38,7 +38,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-               retorno = conexion.Ejecutar(String.Format("Insert Into Socios(Nombre, Apellido, Direccion, Cedula, Codigo, Hectareas, Fertilizantes) Values('{0}', '{1}', '{2}', {3}, {4}, {5}, {6})", this.Nombre, this.Apellido, this.Direccion, this.Cedula, this.Codigo, this.Hectareas, this.Fertilizantes));
+               retorno = conexion.Ejecutar(String.Format("Insert Into Socios(Nombre, Apellido, Direccion, Cedula, CertificacionId, Hectareas, Fertilizantes) Values('{0}', '{1}', '{2}', {3}, {4}, {5}, {6})", this.Nombre, this.Apellido, this.Direccion, this.Cedula, this.CertificacionId, this.Hectareas, this.Fertilizantes));
             }
             catch (Exception ex)
             {
@@ -90,7 +90,6 @@ namespace BLL
                     this.Apellido = dt.Rows[0]["Apellido"].ToString();
                     this.Direccion = dt.Rows[0]["Direccion"].ToString();
                     //this.Cedula = (double)dt.Rows[0]["Cedula"];
-                    this.Codigo = (int)dt.Rows[0]["Codigo"];
                     this.Hectareas = (double)dt.Rows[0]["Hectareas"];
                     this.Fertilizantes = (int)dt.Rows[0]["Fertilizantes"];
                 }

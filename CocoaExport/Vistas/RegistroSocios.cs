@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BLL;
+using BLL;     
+
 namespace CocoaExport.Vistas
 {
     public partial class RegistroSocios : Form
@@ -23,7 +24,7 @@ namespace CocoaExport.Vistas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (CodigotextBox.Text.Length == 0)
+            if (SocioIdtextBox.Text.Length == 0)
             {
                 registro.Nombre = NombretextBox.Text;
                 registro.Apellido = ApellidotextBox.Text;
@@ -55,7 +56,7 @@ namespace CocoaExport.Vistas
             }
             else
             {
-                registro.SocioId = Convert.ToInt32(CodigotextBox.Text);
+                registro.SocioId = Convert.ToInt32(SocioIdtextBox.Text);
 
                 registro.Nombre = NombretextBox.Text;
                 registro.Apellido = ApellidotextBox.Text;
@@ -78,13 +79,13 @@ namespace CocoaExport.Vistas
 
         private void button3_Click(object sender, EventArgs e)
         {
-            registro.SocioId = Convert.ToInt32(CodigotextBox.Text);
+            registro.SocioId = Convert.ToInt32(SocioIdtextBox.Text);
             registro.Borrar();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            IdBuscado = Convert.ToInt32(CodigotextBox.Text);
+            IdBuscado = Convert.ToInt32(SocioIdtextBox.Text);
             if (registro.Buscar(IdBuscado))
             {
                 registro.SocioId = IdBuscado;
@@ -92,7 +93,6 @@ namespace CocoaExport.Vistas
                 ApellidotextBox.Text = registro.Apellido;
                 DirecciontextBox.Text = registro.Direccion;
                 CedulatextBox.Text = registro.Cedula.ToString();
-                CodigotextBox.Text = registro.Codigo.ToString();
                 HectareastextBox.Text = registro.Hectareas.ToString();
 
                 if (registro.Fertilizantes == 1)
@@ -115,7 +115,7 @@ namespace CocoaExport.Vistas
             ApellidotextBox.Clear();
             DirecciontextBox.Clear();
             CedulatextBox.Clear();
-            CodigotextBox.Clear();
+            SocioIdtextBox.Clear();
             HectareastextBox.Clear();
             FertNoradioButton.Checked = false;
             FertSiradioButton.Checked = false;
