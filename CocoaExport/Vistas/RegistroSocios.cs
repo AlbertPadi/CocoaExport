@@ -7,8 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BLL;     
-
+using BLL;
 namespace CocoaExport.Vistas
 {
     public partial class RegistroSocios : Form

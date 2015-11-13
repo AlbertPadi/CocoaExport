@@ -325,6 +325,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegistroSocios";
             this.Text = "Registro Socios";
+            this.Load += new System.EventHandler(this.RegistroSocios_Load);
             this.FertilizantesgroupBox.ResumeLayout(false);
             this.FertilizantesgroupBox.PerformLayout();
             this.ResumeLayout(false);

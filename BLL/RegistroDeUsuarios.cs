@@ -76,7 +76,7 @@ namespace BLL
 
         public override bool Insertar()
         {
-              bool retorno = false;
+            bool retorno = false;
             try
             {
                retorno = conexion.Ejecutar(String.Format("Insert Into Usuarios(Nombres, Apellidos, Direccion, NombreUsuario, Contrasena) Values('{0}', '{1}', '{2}', '{3}', '{4}')", this.Nombre, this.Apellido, this.Direccion, this.NombreUsuario, this.Contrasena));

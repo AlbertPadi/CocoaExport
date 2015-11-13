@@ -52,6 +52,12 @@
     <Compile Include="Vistas\CentrosdeAcopio.Designer.cs">
       <DependentUpon>CentrosdeAcopio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Certificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Certificaciones.Designer.cs">
+      <DependentUpon>Certificaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\ControldeLotes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </Compile>
     <EmbeddedResource Include="Vistas\CentrosdeAcopio.resx">
       <DependentUpon>CentrosdeAcopio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Certificaciones.resx">
+      <DependentUpon>Certificaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\ControldeLotes.resx">
       <DependentUpon>ControldeLotes.cs</DependentUpon>

@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClaseMaestra.cs" />
+    <Compile Include="RegistroCertificaciones.cs" />
     <Compile Include="RegistroDeUsuarios.cs" />
     <Compile Include="RegistrosSocios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
