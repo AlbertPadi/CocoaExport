@@ -8,17 +8,18 @@ create table Usuarios(UsuarioId int primary key identity , Nombres varchar(50),
 
 					
 create table Certificaciones(CertificacionId int primary key identity, Descripcion varchar(50));
-							
+						select*from Certificaciones	
 							
 create table Socios(SocioId int primary key identity, Nombre varchar(50), Apellido varchar(50),
-								Direccion varchar(40),Cedula integer, CertificacionId int References Certificaciones(CertificacionId), Codigo int, CantidadTareas float, 
+								Direccion varchar(40),Cedula varchar(13), CertificacionId int References Certificaciones(CertificacionId), CantidadTerreno float, 
 								Fertilizantes int);
-
+								select *from Socios
+								
 create table Inspecciones(InspeccionesId int primary key identity, SocioId int References Socios(SocioId), 
 								Fecha varchar (20), Fertilizantes int,
 								MaterialSiembra varchar(35), CrianzaAnimales int,
 								ControlPlagas varchar(35), ResumenInspeccion varchar(200));
---detalle
+
 create table TiposCacao(TipoCacaoId int primary key identity, Descripcion varchar(35));					
 								
 create table Recepciones(RecepcionId int primary key identity, SocioId int References Socios(SocioId), 

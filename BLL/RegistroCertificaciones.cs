@@ -10,7 +10,7 @@ namespace BLL
 {
     public class RegistroCertificaciones : ClaseMaestra
     {
-        Conexion con = new Conexion();
+        Conexion conexion = new Conexion();
         public int CertificacionID { get; set; }
         public string Descripcion { get; set; }
 
@@ -31,7 +31,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-                retorno = con.Ejecutar(String.Format("Delete from Certificaciones where CertificacionId={0}", this.CertificacionID));
+                retorno = conexion.Ejecutar(String.Format("Delete from Certificaciones where CertificacionId={0}", this.CertificacionID));
             }
             catch (Exception ex)
             {
@@ -46,7 +46,7 @@ namespace BLL
         {
             DataTable dt;
 
-            dt = con.getDatos(String.Format("select *from Certificaciones where CertificacionId= {0}", IdBuscado));
+            dt = conexion.getDatos(String.Format("select *from Certificaciones where CertificacionId= {0}", IdBuscado));
             if (dt.Rows.Count > 0)
             {
                 this.Descripcion = dt.Rows[0]["Nombre"].ToString();
@@ -60,7 +60,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-                retorno = con.Ejecutar(String.Format("Update Certificaciones Set Descripcion='{0}' where CertificacionId={1}", this.CertificacionID, this.CertificacionID));
+                retorno = conexion.Ejecutar(String.Format("Update Certificaciones Set Descripcion='{0}' where CertificacionId={1}", this.CertificacionID, this.CertificacionID));
             }
             catch (Exception ex)
             {
@@ -75,7 +75,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-                retorno = con.Ejecutar(String.Format("Insert Into Certificaciones(Descripcion) Values('{0}')", this.Descripcion));
+                retorno = conexion.Ejecutar(String.Format("Insert Into Certificaciones(Descripcion) Values('{0}')", this.Descripcion));
             }
             catch (Exception ex)
             {
@@ -88,7 +88,7 @@ namespace BLL
 
         public override DataTable Listar(string campos, string Filtro)
         {
-            throw new NotImplementedException();
+            return conexion.getDatos("Select " + campos + " from Certificaciones where " + Filtro);
         }
     }
 }

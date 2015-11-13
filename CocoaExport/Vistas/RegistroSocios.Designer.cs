@@ -50,7 +50,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CertificacioncomboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.SocioIdtextBox = new System.Windows.Forms.TextBox();
@@ -114,9 +114,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(375, 143);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 16);
+            this.label5.Size = new System.Drawing.Size(63, 16);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Hectareas";
+            this.label5.Text = "Terreno";
             // 
             // HectareastextBox
             // 
@@ -258,13 +258,14 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // comboBox1
+            // CertificacioncomboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(473, 87);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(193, 21);
-            this.comboBox1.TabIndex = 25;
+            this.CertificacioncomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CertificacioncomboBox.FormattingEnabled = true;
+            this.CertificacioncomboBox.Location = new System.Drawing.Point(473, 87);
+            this.CertificacioncomboBox.Name = "CertificacioncomboBox";
+            this.CertificacioncomboBox.Size = new System.Drawing.Size(193, 21);
+            this.CertificacioncomboBox.TabIndex = 25;
             // 
             // label4
             // 
@@ -302,7 +303,7 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.SocioIdtextBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.CertificacioncomboBox);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label9);
@@ -356,7 +357,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CertificacioncomboBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox SocioIdtextBox;

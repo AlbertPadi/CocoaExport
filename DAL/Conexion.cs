@@ -16,7 +16,7 @@ namespace DAL
 
         public Conexion()
         {
-            con = new SqlConnection("Data Source=GEORGE-PC\\SQLEXPRESS;Initial Catalog=CocoaExport;Integrated Security=True");
+            con = new SqlConnection("Data Source = APACHEW-PC\\SQLEXPRESS; Initial Catalog = CocoaExport; Integrated Security = True");
             cmd = new SqlCommand();
         }
 

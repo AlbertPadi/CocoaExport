@@ -23,14 +23,17 @@ namespace CocoaExport.Vistas
 
         private void button1_Click(object sender, EventArgs e)
         {
+            RegistroCertificaciones registrocer = new RegistroCertificaciones();
             if (SocioIdtextBox.Text.Length == 0)
             {
                 registro.Nombre = NombretextBox.Text;
                 registro.Apellido = ApellidotextBox.Text;
                 registro.Direccion = DirecciontextBox.Text;
-                registro.Cedula = Convert.ToDouble(CedulatextBox.Text);
+                registro.Cedula = CedulatextBox.Text;
+                registro.CertificacionId = (int)CertificacioncomboBox.SelectedValue;
+              
 
-                registro.Hectareas = Convert.ToDouble(HectareastextBox.Text);
+                registro.CantidadTerreno = Convert.ToDouble(HectareastextBox.Text);
 
                 if (FertSiradioButton.Checked == true)
                 {
@@ -60,9 +63,9 @@ namespace CocoaExport.Vistas
                 registro.Nombre = NombretextBox.Text;
                 registro.Apellido = ApellidotextBox.Text;
                 registro.Direccion = DirecciontextBox.Text;
-                registro.Cedula = Convert.ToDouble(CedulatextBox.Text);
+                registro.Cedula = CedulatextBox.Text;
 
-                registro.Hectareas = Convert.ToDouble(HectareastextBox.Text);
+                registro.CantidadTerreno = Convert.ToDouble(HectareastextBox.Text);
                 registro.Editar();
 
                 if (registro.Editar())
@@ -92,7 +95,7 @@ namespace CocoaExport.Vistas
                 ApellidotextBox.Text = registro.Apellido;
                 DirecciontextBox.Text = registro.Direccion;
                 CedulatextBox.Text = registro.Cedula.ToString();
-                HectareastextBox.Text = registro.Hectareas.ToString();
+                HectareastextBox.Text = registro.CantidadTerreno.ToString();
 
                 if (registro.Fertilizantes == 1)
                 {
@@ -118,6 +121,15 @@ namespace CocoaExport.Vistas
             HectareastextBox.Clear();
             FertNoradioButton.Checked = false;
             FertSiradioButton.Checked = false;
+        }
+
+        private void RegistroSocios_Load(object sender, EventArgs e)
+        {
+            RegistroCertificaciones registroc = new RegistroCertificaciones();
+            CertificacioncomboBox.DataSource = registroc.Listar("CertificacionId,Descripcion","1=1");
+            CertificacioncomboBox.DisplayMember = "Descripcion";
+            CertificacioncomboBox.ValueMember = "CertificacionId";
+
         }
     }
 }
