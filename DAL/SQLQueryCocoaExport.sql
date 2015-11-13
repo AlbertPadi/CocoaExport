@@ -37,4 +37,3 @@ create table Exportaciones(ExportacionId int primary key identity, DestinoId int
 								CantidadToneladas float, Certificacion varchar(40), Fecha varchar(20), 
 								LotesExportados float, Detalle varchar(300));
 
-Select *From Usuarios

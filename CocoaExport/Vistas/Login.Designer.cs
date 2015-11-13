@@ -68,6 +68,7 @@
             this.ContrasenatextBox.TabIndex = 1;
             this.ContrasenatextBox.UseSystemPasswordChar = true;
             this.ContrasenatextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.ContrasenatextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ContrasenatextBox_KeyDown);
             // 
             // Clave
             // 

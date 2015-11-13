@@ -70,7 +70,7 @@ namespace BLL
         {
             bool retorno = false;
 
-            retorno = conexion.Ejecutar(String.Format("Update Usuarios Set Nombre='{0}', Apellido='{1}', Direccion='{2}', NombreUsuario='{3}', Contraseña='{4}' where UsuarioId={5}", this.Nombre, this.Apellido, this.Direccion, this.NombreUsuario, this.Contrasena));
+            retorno = conexion.Ejecutar(String.Format("Update Usuarios Set Nombres='{0}', Apellidos='{1}', Direccion='{2}', NombreUsuario='{3}', Contraseña='{4}' where UsuarioId={5}", this.Nombre, this.Apellido, this.Direccion, this.NombreUsuario, this.Contrasena));
             return retorno;
         }
 
@@ -79,7 +79,7 @@ namespace BLL
               bool retorno = false;
             try
             {
-               retorno = conexion.Ejecutar(String.Format("Insert Into Usuarios(Nombre, Apellido, Direccion, NombreUsuario, Contraseña) Values('{0}', '{1}', '{2}', '{3}', '{4}')", this.Nombre, this.Apellido, this.Direccion, this.NombreUsuario, this.Contrasena));
+               retorno = conexion.Ejecutar(String.Format("Insert Into Usuarios(Nombres, Apellidos, Direccion, NombreUsuario, Contrasena) Values('{0}', '{1}', '{2}', '{3}', '{4}')", this.Nombre, this.Apellido, this.Direccion, this.NombreUsuario, this.Contrasena));
             }
             catch (Exception ex)
             {
