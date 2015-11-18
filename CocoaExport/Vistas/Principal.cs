@@ -91,5 +91,11 @@ namespace CocoaExport
             DestinosExportes destinos = new DestinosExportes();
             destinos.Show();
         }
+
+        private void registroInspeccionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InspeccionesRegistro Inspecciones = new InspeccionesRegistro();
+            Inspecciones.Show();
+        }
     }
 }

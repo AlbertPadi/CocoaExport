@@ -41,9 +41,10 @@
             this.registroCertificacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inspeccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controlDeLotesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroInspeccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -133,6 +134,8 @@
             // 
             // inspeccionesToolStripMenuItem
             // 
+            this.inspeccionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registroInspeccionesToolStripMenuItem});
             this.inspeccionesToolStripMenuItem.Name = "inspeccionesToolStripMenuItem";
             this.inspeccionesToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
             this.inspeccionesToolStripMenuItem.Text = "Inspecciones";
@@ -147,24 +150,31 @@
             this.controlDeLotesToolStripMenuItem.Text = "Destinos Exportes";
             this.controlDeLotesToolStripMenuItem.Click += new System.EventHandler(this.controlDeLotesToolStripMenuItem_Click);
             // 
-            // exportacionToolStripMenuItem
-            // 
-            this.exportacionToolStripMenuItem.Name = "exportacionToolStripMenuItem";
-            this.exportacionToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
-            this.exportacionToolStripMenuItem.Text = "Exportacion";
-            // 
             // registrarToolStripMenuItem
             // 
             this.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
-            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.registrarToolStripMenuItem.Text = "Registrar";
             this.registrarToolStripMenuItem.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click);
             // 
             // consultarToolStripMenuItem
             // 
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.consultarToolStripMenuItem.Text = "Consultar";
+            // 
+            // exportacionToolStripMenuItem
+            // 
+            this.exportacionToolStripMenuItem.Name = "exportacionToolStripMenuItem";
+            this.exportacionToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
+            this.exportacionToolStripMenuItem.Text = "Exportacion";
+            // 
+            // registroInspeccionesToolStripMenuItem
+            // 
+            this.registroInspeccionesToolStripMenuItem.Name = "registroInspeccionesToolStripMenuItem";
+            this.registroInspeccionesToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.registroInspeccionesToolStripMenuItem.Text = "Registro Inspecciones";
+            this.registroInspeccionesToolStripMenuItem.Click += new System.EventHandler(this.registroInspeccionesToolStripMenuItem_Click);
             // 
             // Principal
             // 
@@ -206,6 +216,7 @@
         private System.Windows.Forms.ToolStripMenuItem registroCertificacionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registroInspeccionesToolStripMenuItem;
     }
 }
 
