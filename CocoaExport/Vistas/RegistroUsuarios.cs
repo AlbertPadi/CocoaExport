@@ -30,7 +30,7 @@ namespace CocoaExport.Vistas
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
-            RegistroDeUsuarios Registro = new RegistroDeUsuarios();
+            Usuarios Registro = new Usuarios();
             Registro.Nombre = NombretextBox.Text;
             Registro.Apellido = ApellidotextBox.Text;
             Registro.Direccion = DirecciontextBox.Text;

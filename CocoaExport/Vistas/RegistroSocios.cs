@@ -14,7 +14,7 @@ namespace CocoaExport.Vistas
     {
         int n;
         int IdBuscado;
-        BLL.RegistrosSocios registro = new BLL.RegistrosSocios();
+        BLL.Socios registro = new BLL.Socios();
         public RegistroSocios()
         {
             
@@ -23,7 +23,7 @@ namespace CocoaExport.Vistas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            RegistroCertificaciones registrocer = new RegistroCertificaciones();
+            BLL.Certificaciones registrocer = new BLL.Certificaciones();
             if (SocioIdtextBox.Text.Length == 0)
             {
                 registro.Nombre = NombretextBox.Text;
@@ -66,7 +66,7 @@ namespace CocoaExport.Vistas
                 registro.Cedula = CedulatextBox.Text;
 
                 registro.CantidadTerreno = Convert.ToDouble(HectareastextBox.Text);
-                registro.Editar();
+                
 
                 if (registro.Editar())
                 {
@@ -87,7 +87,9 @@ namespace CocoaExport.Vistas
 
         private void button4_Click(object sender, EventArgs e)
         {
-            IdBuscado = Convert.ToInt32(SocioIdtextBox.Text);
+            int vari;
+            int.TryParse(SocioIdtextBox.Text, out vari);
+            IdBuscado = vari;
             if (registro.Buscar(IdBuscado))
             {
                 registro.SocioId = IdBuscado;
@@ -122,13 +124,24 @@ namespace CocoaExport.Vistas
             FertNoradioButton.Checked = false;
             FertSiradioButton.Checked = false;
         }
-
+        DataTable table = new DataTable();
+        DateTime date = DateTime.Now;
         private void RegistroSocios_Load(object sender, EventArgs e)
         {
-            RegistroCertificaciones registroc = new RegistroCertificaciones();
-            CertificacioncomboBox.DataSource = registroc.Listar("CertificacionId,Descripcion","1=1");
+            BLL.Certificaciones registroc = new BLL.Certificaciones();
+            CertificacioncomboBox.DataSource = registroc.Listar("CertificacionId,Descripcion","1=1","");
             CertificacioncomboBox.DisplayMember = "Descripcion";
             CertificacioncomboBox.ValueMember = "CertificacionId";
+            Socios socios = new Socios();
+            RegistroSocios registro = new RegistroSocios ();
+            
+            table = socios.Listar("", "", "");
+
+            chart.Series.Add("Socios");
+            chart.Series["Series1"].XValueMember = "Fecha";
+            chart.Series["Series1"].YValueMembers = "Monto";
+            chart.DataSource = table;
+            chart.DataBind();
 
         }
     }

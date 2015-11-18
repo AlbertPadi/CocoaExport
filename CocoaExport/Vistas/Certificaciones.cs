@@ -15,7 +15,7 @@ namespace CocoaExport.Vistas
     {
         int IdBuscado;
         //BLL.Certificaciones registro = new BLL.Certificaciones();
-        BLL.RegistroCertificaciones registro = new RegistroCertificaciones();
+        BLL.Certificaciones registro = new BLL.Certificaciones();
 
         public Certificaciones()
         {

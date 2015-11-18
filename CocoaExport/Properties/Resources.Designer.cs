@@ -163,6 +163,26 @@ namespace CocoaExport.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logo_CocoaExport_Proyect {
+            get {
+                object obj = ResourceManager.GetObject("Logo CocoaExport Proyect", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_CocoaExport_Proyect1 {
+            get {
+                object obj = ResourceManager.GetObject("Logo CocoaExport Proyect1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap plus_32 {
             get {
                 object obj = ResourceManager.GetObject("plus-32", resourceCulture);

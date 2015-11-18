@@ -38,13 +38,13 @@
             this.registroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroSociosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroCertificacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inspeccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controlDeLotesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.registroCertificacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -57,7 +57,7 @@
             this.exportacionToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(807, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(832, 24);
             this.menuStrip1.TabIndex = 14;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -124,6 +124,13 @@
             this.registroUsuariosToolStripMenuItem.Text = "Registro Usuarios";
             this.registroUsuariosToolStripMenuItem.Click += new System.EventHandler(this.registroUsuariosToolStripMenuItem_Click);
             // 
+            // registroCertificacionesToolStripMenuItem
+            // 
+            this.registroCertificacionesToolStripMenuItem.Name = "registroCertificacionesToolStripMenuItem";
+            this.registroCertificacionesToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.registroCertificacionesToolStripMenuItem.Text = "Registro Certificaciones";
+            this.registroCertificacionesToolStripMenuItem.Click += new System.EventHandler(this.registroCertificacionesToolStripMenuItem_Click);
+            // 
             // inspeccionesToolStripMenuItem
             // 
             this.inspeccionesToolStripMenuItem.Name = "inspeccionesToolStripMenuItem";
@@ -132,9 +139,13 @@
             // 
             // controlDeLotesToolStripMenuItem
             // 
+            this.controlDeLotesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarToolStripMenuItem,
+            this.consultarToolStripMenuItem});
             this.controlDeLotesToolStripMenuItem.Name = "controlDeLotesToolStripMenuItem";
-            this.controlDeLotesToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
-            this.controlDeLotesToolStripMenuItem.Text = "Control de Lotes";
+            this.controlDeLotesToolStripMenuItem.Size = new System.Drawing.Size(111, 20);
+            this.controlDeLotesToolStripMenuItem.Text = "Destinos Exportes";
+            this.controlDeLotesToolStripMenuItem.Click += new System.EventHandler(this.controlDeLotesToolStripMenuItem_Click);
             // 
             // exportacionToolStripMenuItem
             // 
@@ -142,46 +153,44 @@
             this.exportacionToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
             this.exportacionToolStripMenuItem.Text = "Exportacion";
             // 
-            // pictureBox1
+            // registrarToolStripMenuItem
             // 
-            this.pictureBox1.Image = global::CocoaExport.Properties.Resources.img14132485a794a2fb51;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 23);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(815, 200);
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
+            this.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
+            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.registrarToolStripMenuItem.Text = "Registrar";
+            this.registrarToolStripMenuItem.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click);
             // 
-            // registroCertificacionesToolStripMenuItem
+            // consultarToolStripMenuItem
             // 
-            this.registroCertificacionesToolStripMenuItem.Name = "registroCertificacionesToolStripMenuItem";
-            this.registroCertificacionesToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.registroCertificacionesToolStripMenuItem.Text = "Registro Certificaciones";
-            this.registroCertificacionesToolStripMenuItem.Click += new System.EventHandler(this.registroCertificacionesToolStripMenuItem_Click);
+            this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.consultarToolStripMenuItem.Text = "Consultar";
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
-            this.ClientSize = new System.Drawing.Size(807, 385);
-            this.Controls.Add(this.pictureBox1);
+            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackgroundImage = global::CocoaExport.Properties.Resources.Logo_CocoaExport_Proyect1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(832, 355);
             this.Controls.Add(this.menuStrip1);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Principal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroToolStripMenuItem;
@@ -195,6 +204,8 @@
         private System.Windows.Forms.ToolStripMenuItem sistemaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configuracionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroCertificacionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
     }
 }
 

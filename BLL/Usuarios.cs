@@ -9,7 +9,7 @@ using DAL;
 
 namespace BLL
 {
-    public class RegistroDeUsuarios : ClaseMaestra
+    public class Usuarios : ClaseMaestra
     {
         Conexion conexion = new Conexion();
         public string Nombre { get; set; }
@@ -19,7 +19,7 @@ namespace BLL
         public string Contrasena { get; set; }
         public int UsuarioId { get; set; }
 
-        public RegistroDeUsuarios()
+        public Usuarios()
         {
             this.Nombre = "";
             this.Apellido = "";
@@ -29,7 +29,7 @@ namespace BLL
             this.UsuarioId = 0;
         }
 
-        public RegistroDeUsuarios(string nombre, string apellido, string direccion, string nombreusuario, string contrasena, int usuarioid)
+        public Usuarios(string nombre, string apellido, string direccion, string nombreusuario, string contrasena, int usuarioid)
         {
             this.Nombre = nombre;
             this.Apellido = apellido;
@@ -90,7 +90,7 @@ namespace BLL
             return retorno;
         }
 
-        public override DataTable Listar(string campos, string Filtro)
+        public override DataTable Listar(string campos, string condicion, string Filtro)
         {
             throw new NotImplementedException();
         }

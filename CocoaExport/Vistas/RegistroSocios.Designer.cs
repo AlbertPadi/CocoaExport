@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroSocios));
             this.NombretextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,7 +57,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.SocioIdtextBox = new System.Windows.Forms.TextBox();
+            this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.FertilizantesgroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
             this.SuspendLayout();
             // 
             // NombretextBox
@@ -294,12 +299,29 @@
             this.SocioIdtextBox.Size = new System.Drawing.Size(193, 20);
             this.SocioIdtextBox.TabIndex = 27;
             // 
+            // chart
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart.Legends.Add(legend1);
+            this.chart.Location = new System.Drawing.Point(672, 27);
+            this.chart.Name = "chart";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart.Series.Add(series1);
+            this.chart.Size = new System.Drawing.Size(300, 300);
+            this.chart.TabIndex = 29;
+            this.chart.Text = "chart1";
+            // 
             // RegistroSocios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
-            this.ClientSize = new System.Drawing.Size(691, 378);
+            this.ClientSize = new System.Drawing.Size(986, 378);
+            this.Controls.Add(this.chart);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.SocioIdtextBox);
             this.Controls.Add(this.label4);
@@ -329,6 +351,7 @@
             this.Load += new System.EventHandler(this.RegistroSocios_Load);
             this.FertilizantesgroupBox.ResumeLayout(false);
             this.FertilizantesgroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -361,5 +384,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox SocioIdtextBox;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart;
     }
 }

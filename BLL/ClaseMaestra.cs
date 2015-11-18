@@ -13,5 +13,6 @@ namespace BLL
         public abstract bool Borrar();
         public abstract bool Buscar(int IdBuscado);
         public abstract DataTable Listar(string Campos, string Condicion, string Orden);
+
     }
 }
