@@ -8,7 +8,7 @@ using DAL;
 
 namespace BLL
 {
-    public class RegistrosSocios:ClaseMaestra
+    public class Socios:ClaseMaestra
     {
         Conexion conexion = new Conexion();
         public string Nombre { get; set; }
@@ -21,7 +21,7 @@ namespace BLL
         public int SocioId { get; set; }
 
 
-        public RegistrosSocios()
+        public Socios()
         {
             this.Nombre = "";
             this.Apellido = "";
@@ -99,7 +99,7 @@ namespace BLL
 
         }
 
-        public override DataTable Listar(string campos, string Filtro)
+        public override DataTable Listar(string Campos, string Condicion, string Orden)
         {
             throw new NotImplementedException();
         }

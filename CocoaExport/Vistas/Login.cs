@@ -12,7 +12,7 @@ namespace CocoaExport.Vistas
 {
     public partial class Login : Form
     {
-        RegistroDeUsuarios registro = new RegistroDeUsuarios();
+        Usuarios registro = new Usuarios();
         
         public Login()
         {

@@ -8,19 +8,19 @@ using DAL;
 
 namespace BLL
 {
-    public class RegistroCertificaciones : ClaseMaestra
+    public class Certificaciones : ClaseMaestra
     {
         Conexion conexion = new Conexion();
         public int CertificacionID { get; set; }
         public string Descripcion { get; set; }
 
-        public RegistroCertificaciones()
+        public Certificaciones()
         {
             this.CertificacionID = 0;
             this.Descripcion = "";
         }
 
-        public RegistroCertificaciones(int certificacionid, string descripcion)
+        public Certificaciones(int certificacionid, string descripcion)
         {
             this.CertificacionID = certificacionid;
             this.Descripcion = descripcion;
@@ -86,9 +86,14 @@ namespace BLL
             return retorno;
         }
 
-        public override DataTable Listar(string campos, string Filtro)
+        public override DataTable Listar(string Campos, string Condicion, string Orden)
         {
-            return conexion.getDatos("Select " + campos + " from Certificaciones where " + Filtro);
+            string ordenFinal = " ";
+            if (!Orden.Equals(""))
+                ordenFinal = " Orden By " + Orden;
+
+
+            return conexion.getDatos(" Select " + Campos + " from Certificaciones where " + Condicion + ordenFinal);
         }
     }
 }

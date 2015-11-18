@@ -80,5 +80,16 @@ namespace CocoaExport
             Certificaciones registro = new Certificaciones();
             registro.Show();
         }
+
+        private void controlDeLotesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void registrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DestinosExportes destinos = new DestinosExportes();
+            destinos.Show();
+        }
     }
 }

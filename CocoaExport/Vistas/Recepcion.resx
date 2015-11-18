@@ -117,47 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Logo CocoaExport Proyect" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logo CocoaExport Proyect.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="list-add-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\list-add-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Carpeta" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Carpeta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1443814210_fine_print" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1443814210_fine_print.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="img14132485a794a2fb51" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img14132485a794a2fb51.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="plus-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\plus-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="businessman_person_web_login_friend_web_browser-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\businessman_person_web_login_friend_web_browser-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Inspection-128" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Inspection-128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="trash-circle-red-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\trash-circle-red-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1441773161_save" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1441773161_save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Home" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Login-Manager" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Login-Manager.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1444595857_add_user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1444595857_add_user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Logo CocoaExport Proyect1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logo CocoaExport Proyect1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

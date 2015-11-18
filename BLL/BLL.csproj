@@ -41,9 +41,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClaseMaestra.cs" />
-    <Compile Include="RegistroCertificaciones.cs" />
-    <Compile Include="RegistroDeUsuarios.cs" />
-    <Compile Include="RegistrosSocios.cs" />
+    <Compile Include="DestinosExportes.cs" />
+    <Compile Include="Lotes.cs" />
+    <Compile Include="Recepcion.cs" />
+    <Compile Include="Certificaciones.cs" />
+    <Compile Include="Usuarios.cs" />
+    <Compile Include="Socios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
