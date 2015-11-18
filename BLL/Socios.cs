@@ -103,7 +103,7 @@ namespace BLL
         { string ordenFinal = "";
             if (Orden.Equals(""))
                 ordenFinal = " Orden By " + Orden;
-            return conexion.getDatos("Select " + Campos + " from Inspecciones where " + Condicion+ Orden);
+            return conexion.getDatos("Select " + Campos + " from Socios where " + Condicion+ Orden);
         }
     }
 }

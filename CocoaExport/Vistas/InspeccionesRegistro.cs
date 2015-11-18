@@ -11,13 +11,13 @@ using BLL;
 
 namespace CocoaExport.Vistas
 {
-    public partial class Inspecciones : Form
+    public partial class InspeccionesRegistro : Form
     {
         int IdBuscado;
         int Num;
-        BLL.Inspecciones Registro = new BLL.Inspecciones();
+        BLL.Inspeciones Registro = new BLL.Inspeciones();
 
-        public Inspecciones()
+        public InspeccionesRegistro()
         {
             InitializeComponent();
         }
@@ -29,7 +29,7 @@ namespace CocoaExport.Vistas
 
         private void Inspecciones_Load(object sender, EventArgs e)
         {
-            BLL.Inspecciones RegistroInsp = new BLL.Inspecciones();
+            BLL.Inspeciones RegistroInsp = new BLL.Inspeciones();
             IdSociocomboBox.DataSource = RegistroInsp.Listar("SocioId, Nombre", "1=1");
             IdSociocomboBox.DisplayMember = "Nombre";
             IdSociocomboBox.ValueMember = "SocioId";
@@ -42,7 +42,7 @@ namespace CocoaExport.Vistas
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
-            BLL.Inspecciones RegistroInsp = new BLL.Inspecciones();
+            BLL.Inspeciones RegistroInsp = new BLL.Inspeciones();
             if (IdInsptextBox.Text.Length == 0)
             {
                 Registro.Fecha = FechadateTimePicker.Text;
