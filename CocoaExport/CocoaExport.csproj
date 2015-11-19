@@ -77,12 +77,6 @@
     <Compile Include="Vistas\Exportacion.Designer.cs">
       <DependentUpon>Exportacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\InspeccionesRegistro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\InspeccionesRegistro.Designer.cs">
-      <DependentUpon>InspeccionesRegistro.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vistas\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +96,12 @@
     </Compile>
     <Compile Include="Vistas\Recepcion.Designer.cs">
       <DependentUpon>Recepcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\RegistroDeInspecciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\RegistroDeInspecciones.Designer.cs">
+      <DependentUpon>RegistroDeInspecciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\RegistroSocios.cs">
       <SubType>Form</SubType>
@@ -130,9 +130,6 @@
     <EmbeddedResource Include="Vistas\Exportacion.resx">
       <DependentUpon>Exportacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\InspeccionesRegistro.resx">
-      <DependentUpon>InspeccionesRegistro.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +148,9 @@
     </Compile>
     <EmbeddedResource Include="Vistas\Recepcion.resx">
       <DependentUpon>Recepcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\RegistroDeInspecciones.resx">
+      <DependentUpon>RegistroDeInspecciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\RegistroSocios.resx">
       <DependentUpon>RegistroSocios.cs</DependentUpon>

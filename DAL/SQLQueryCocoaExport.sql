@@ -12,6 +12,7 @@ create table Usuarios(UsuarioId int primary key identity ,
 					
 create table Certificaciones(CertificacionId int primary key identity, 
 			Descripcion varchar(50));
+
 			select*from Certificaciones	
 						
 							
@@ -24,7 +25,7 @@ create table Socios(SocioId int primary key identity,
 			CantidadTerreno float, 
 			Fertilizantes int);
 			
-			select *from Socios
+		select *from Socios
 								
 create table Inspecciones(InspeccionesId int primary key identity, 
 			SocioId int References Socios(SocioId),

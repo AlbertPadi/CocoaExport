@@ -126,13 +126,14 @@ namespace CocoaExport.Vistas
         }
         DataTable table = new DataTable();
         DateTime date = DateTime.Now;
+
         private void RegistroSocios_Load(object sender, EventArgs e)
         {
             BLL.Certificaciones registroc = new BLL.Certificaciones();
             CertificacioncomboBox.DataSource = registroc.Listar("CertificacionId,Descripcion","1=1","");
             CertificacioncomboBox.DisplayMember = "Descripcion";
             CertificacioncomboBox.ValueMember = "CertificacionId";
-            Socios socios = new Socios();
+            Socios socios = new Socios(); 
             RegistroSocios registro = new RegistroSocios ();
             
             table = socios.Listar("", "", "");
