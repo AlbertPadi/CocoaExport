@@ -318,7 +318,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
             this.ClientSize = new System.Drawing.Size(805, 393);
             this.Controls.Add(this.FertgroupBox);
             this.Controls.Add(this.CrianzaAngroupBox);
@@ -343,7 +343,7 @@
             this.Controls.Add(this.IdInsptextBox);
             this.Controls.Add(this.IdInsplabel);
             this.Name = "RegistroDeInspecciones";
-            this.Text = "RegistroDeInspecciones";
+            this.Text = "Registro Inspecciones";
             this.Load += new System.EventHandler(this.RegistroDeInspecciones_Load);
             this.FertgroupBox.ResumeLayout(false);
             this.FertgroupBox.PerformLayout();

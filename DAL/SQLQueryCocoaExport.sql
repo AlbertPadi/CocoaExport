@@ -9,6 +9,7 @@ create table Usuarios(UsuarioId int primary key identity ,
 
 			insert into Usuarios(Nombres, Apellidos, Direccion, NombreUsuario, Contrasena) values ('Jorge', 'Castro', 'Pimentel', 'Jorgeecm', '123456789');
 			 
+			select *from Usuarios;
 					
 create table Certificaciones(CertificacionId int primary key identity, 
 			Descripcion varchar(50));

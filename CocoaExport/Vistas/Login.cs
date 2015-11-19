@@ -35,7 +35,7 @@ namespace CocoaExport.Vistas
                 {
 
                     Principal principal = new Principal();
-                    principal.ShowDialog();
+                    principal.Show();
                 }
                 
             }
