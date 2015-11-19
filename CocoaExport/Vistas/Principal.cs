@@ -94,7 +94,7 @@ namespace CocoaExport
 
         private void registroInspeccionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            InspeccionesRegistro Inspecciones = new InspeccionesRegistro();
+            RegistroDeInspecciones Inspecciones = new RegistroDeInspecciones();
             Inspecciones.Show();
         }
     }

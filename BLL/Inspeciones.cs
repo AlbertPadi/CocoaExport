@@ -32,10 +32,6 @@ namespace BLL
             this.ResumenInspeccion = "";
         }
 
-        public object Listar(string v1, string v2)
-        {
-            throw new NotImplementedException();
-        }
 
         public Inspeciones(int inspeccionid, int socioid, string fecha, int fertilizantes, string materialsiembra, int crianzaanimales, string controlplagas, string resumeninspeccion)
         {
@@ -53,7 +49,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-                retorno = conexion.Ejecutar(String.Format("Delete from Socios where InspeccionId={0}", this.InspeccionId));
+                retorno = conexion.Ejecutar(String.Format("Delete from Inspecciones where InspeccionId={0}", this.InspeccionId));
             }
             catch (Exception ex)
             {
