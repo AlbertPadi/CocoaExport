@@ -56,7 +56,7 @@ namespace BLL
             return true;
 
         }
-        public override bool Borrar()
+        public override bool Eliminar()
         {
             return conexion.Ejecutar(String.Format("Delete *From where UsuarioId= {0}", this.UsuarioId));
         }

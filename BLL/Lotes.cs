@@ -106,7 +106,7 @@ namespace BLL
             return retorno;
         }
 
-        public override bool Borrar()
+        public override bool Eliminar()
         {
             bool retorno = false;
             try

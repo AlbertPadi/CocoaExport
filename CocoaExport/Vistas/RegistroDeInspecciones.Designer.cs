@@ -77,11 +77,15 @@
             // 
             // IdSociocomboBox
             // 
+            this.IdSociocomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.IdSociocomboBox.FormattingEnabled = true;
-            this.IdSociocomboBox.Location = new System.Drawing.Point(619, 57);
+            this.IdSociocomboBox.Items.AddRange(new object[] {
+            ""});
+            this.IdSociocomboBox.Location = new System.Drawing.Point(586, 62);
             this.IdSociocomboBox.Name = "IdSociocomboBox";
             this.IdSociocomboBox.Size = new System.Drawing.Size(200, 21);
             this.IdSociocomboBox.TabIndex = 36;
+            this.IdSociocomboBox.SelectedIndexChanged += new System.EventHandler(this.IdSociocomboBox_SelectedIndexChanged);
             // 
             // label1
             // 

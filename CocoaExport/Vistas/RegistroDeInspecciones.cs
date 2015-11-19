@@ -24,10 +24,10 @@ namespace CocoaExport.Vistas
 
         private void RegistroDeInspecciones_Load(object sender, EventArgs e)
         {
-           /* Inspeciones RegistroInsp = new Inspeciones();
-            IdSociocomboBox.DataSource = RegistroInsp.Listar("SocioId, Nombre", "1=1","");
+            Socios socio = new Socios();
+            IdSociocomboBox.DataSource = socio.Listar("SocioId, Nombre", "1=1", "");
             IdSociocomboBox.DisplayMember = "Nombre";
-            IdSociocomboBox.ValueMember = "SocioId";*/
+            IdSociocomboBox.ValueMember = "SocioId";
         }
 
         private void Nuevobutton_Click(object sender, EventArgs e)
@@ -141,7 +141,12 @@ namespace CocoaExport.Vistas
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
             Registro.InspeccionId = Convert.ToInt32(IdInsptextBox.Text);
-            Registro.Borrar();
+            Registro.Eliminar();
+        }
+
+        private void IdSociocomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

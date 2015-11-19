@@ -66,7 +66,7 @@ namespace BLL
             return retorno;
         }
 
-        public override bool Borrar()
+        public override bool Eliminar()
         {
             bool retorno = false;
             try
@@ -104,9 +104,9 @@ namespace BLL
         public override DataTable Listar(string Campos, string Condicion, string Orden)
         {
             string ordenFinal = "";
-            if (Orden.Equals(""))
+            if (!Orden.Equals(""))
                 ordenFinal = " Orden By " + Orden;
-            return conexion.getDatos("Select " + Campos + " from Socios where " + Condicion+ Orden);
+            return conexion.getDatos(" Select " + Campos + " from Socios where " + Condicion + ""+ ordenFinal);
         }
     }
 }

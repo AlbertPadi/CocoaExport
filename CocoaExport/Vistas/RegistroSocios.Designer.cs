@@ -272,6 +272,7 @@
             this.CertificacioncomboBox.Name = "CertificacioncomboBox";
             this.CertificacioncomboBox.Size = new System.Drawing.Size(193, 21);
             this.CertificacioncomboBox.TabIndex = 25;
+            this.CertificacioncomboBox.SelectedIndexChanged += new System.EventHandler(this.CertificacioncomboBox_SelectedIndexChanged);
             // 
             // label4
             // 

@@ -47,6 +47,7 @@ namespace CocoaExport.Vistas
 
 
             }
+            this.Visible = false;
 
         }
 

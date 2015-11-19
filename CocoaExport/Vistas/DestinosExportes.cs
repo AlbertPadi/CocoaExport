@@ -67,7 +67,7 @@ namespace CocoaExport.Vistas
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
             destino.DestinosId = Convert.ToInt32(DestinoIdtextBox.Text);
-            if (destino.Borrar())
+            if (destino.Eliminar())
             {
                 MessageBox.Show("Se han borrado los datos");
             }

@@ -87,7 +87,7 @@ namespace CocoaExport.Vistas
         private void button3_Click(object sender, EventArgs e)
         {
             registro.SocioId = Convert.ToInt32(SocioIdtextBox.Text);
-            registro.Borrar();
+            registro.Eliminar();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -144,6 +144,7 @@ namespace CocoaExport.Vistas
             CertificacioncomboBox.DisplayMember = "Descripcion";
             CertificacioncomboBox.ValueMember = "CertificacionId";
             Socios socios = new Socios(); 
+
             RegistroSocios registro = new RegistroSocios ();
             
             table = socios.Listar("", "", "");
@@ -178,7 +179,11 @@ namespace CocoaExport.Vistas
                 MessageBox.Show("No acepta numeros este campo");
                
                 }
-            } 
-    
+            }
+
+        private void CertificacioncomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

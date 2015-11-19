@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="ClaseMaestra.cs" />
     <Compile Include="DestinosExportes.cs" />
+    <Compile Include="Exportacion.cs" />
     <Compile Include="Lotes.cs" />
     <Compile Include="Recepcion.cs" />
     <Compile Include="Certificaciones.cs" />
