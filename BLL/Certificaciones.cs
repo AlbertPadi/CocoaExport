@@ -49,7 +49,7 @@ namespace BLL
             dt = conexion.getDatos(String.Format("select *from Certificaciones where CertificacionId= {0}", IdBuscado));
             if (dt.Rows.Count > 0)
             {
-                this.Descripcion = dt.Rows[0]["Nombre"].ToString();
+                this.Descripcion = dt.Rows[0]["Descripcion"].ToString();
             }
 
             return dt.Rows.Count > 0;

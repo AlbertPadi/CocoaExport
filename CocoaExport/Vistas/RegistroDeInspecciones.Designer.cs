@@ -60,7 +60,7 @@
             // 
             // IdInsptextBox
             // 
-            this.IdInsptextBox.Location = new System.Drawing.Point(176, 52);
+            this.IdInsptextBox.Location = new System.Drawing.Point(619, 12);
             this.IdInsptextBox.Name = "IdInsptextBox";
             this.IdInsptextBox.Size = new System.Drawing.Size(200, 20);
             this.IdInsptextBox.TabIndex = 34;
@@ -69,7 +69,7 @@
             // 
             this.IdInsplabel.AutoSize = true;
             this.IdInsplabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IdInsplabel.Location = new System.Drawing.Point(38, 52);
+            this.IdInsplabel.Location = new System.Drawing.Point(481, 12);
             this.IdInsplabel.Name = "IdInsplabel";
             this.IdInsplabel.Size = new System.Drawing.Size(100, 16);
             this.IdInsplabel.TabIndex = 33;
@@ -78,7 +78,7 @@
             // IdSociocomboBox
             // 
             this.IdSociocomboBox.FormattingEnabled = true;
-            this.IdSociocomboBox.Location = new System.Drawing.Point(176, 97);
+            this.IdSociocomboBox.Location = new System.Drawing.Point(619, 57);
             this.IdSociocomboBox.Name = "IdSociocomboBox";
             this.IdSociocomboBox.Size = new System.Drawing.Size(200, 21);
             this.IdSociocomboBox.TabIndex = 36;
@@ -87,7 +87,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(38, 103);
+            this.label1.Location = new System.Drawing.Point(481, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 16);
             this.label1.TabIndex = 35;
@@ -193,7 +193,7 @@
             // 
             // ControlPlagastextBox
             // 
-            this.ControlPlagastextBox.Location = new System.Drawing.Point(176, 226);
+            this.ControlPlagastextBox.Location = new System.Drawing.Point(172, 245);
             this.ControlPlagastextBox.Name = "ControlPlagastextBox";
             this.ControlPlagastextBox.Size = new System.Drawing.Size(200, 20);
             this.ControlPlagastextBox.TabIndex = 48;
@@ -202,7 +202,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(38, 230);
+            this.label5.Location = new System.Drawing.Point(34, 249);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(132, 16);
             this.label5.TabIndex = 51;
@@ -210,7 +210,7 @@
             // 
             // MaterialSiembratextBox
             // 
-            this.MaterialSiembratextBox.Location = new System.Drawing.Point(176, 183);
+            this.MaterialSiembratextBox.Location = new System.Drawing.Point(172, 202);
             this.MaterialSiembratextBox.Name = "MaterialSiembratextBox";
             this.MaterialSiembratextBox.Size = new System.Drawing.Size(200, 20);
             this.MaterialSiembratextBox.TabIndex = 46;
@@ -219,7 +219,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(38, 183);
+            this.label4.Location = new System.Drawing.Point(34, 202);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(126, 16);
             this.label4.TabIndex = 50;
@@ -229,7 +229,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(38, 138);
+            this.label2.Location = new System.Drawing.Point(38, 36);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 16);
             this.label2.TabIndex = 47;
@@ -237,7 +237,7 @@
             // 
             // FechadateTimePicker
             // 
-            this.FechadateTimePicker.Location = new System.Drawing.Point(176, 138);
+            this.FechadateTimePicker.Location = new System.Drawing.Point(172, 36);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
             this.FechadateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.FechadateTimePicker.TabIndex = 45;
@@ -247,7 +247,7 @@
             this.FertgroupBox.Controls.Add(this.FertNoradioButton);
             this.FertgroupBox.Controls.Add(this.FertSiradioButton);
             this.FertgroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FertgroupBox.Location = new System.Drawing.Point(407, 52);
+            this.FertgroupBox.Location = new System.Drawing.Point(37, 78);
             this.FertgroupBox.Name = "FertgroupBox";
             this.FertgroupBox.Size = new System.Drawing.Size(350, 93);
             this.FertgroupBox.TabIndex = 53;
@@ -283,7 +283,7 @@
             this.CrianzaAngroupBox.Controls.Add(this.CrianzaNoradioButton);
             this.CrianzaAngroupBox.Controls.Add(this.CrianzaSiradioButton);
             this.CrianzaAngroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CrianzaAngroupBox.Location = new System.Drawing.Point(407, 154);
+            this.CrianzaAngroupBox.Location = new System.Drawing.Point(441, 129);
             this.CrianzaAngroupBox.Name = "CrianzaAngroupBox";
             this.CrianzaAngroupBox.Size = new System.Drawing.Size(352, 93);
             this.CrianzaAngroupBox.TabIndex = 54;

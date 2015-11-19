@@ -44,6 +44,23 @@ namespace BLL
             this.ControlPlagas = controlplagas;
             this.ResumenInspeccion = resumeninspeccion;
         }
+
+        public override bool Insertar()
+        {
+            bool retorno = false;
+            try
+            {
+                retorno = conexion.Ejecutar(String.Format("Insert Into Inspecciones(InspeccionId, SocioId, Fecha, Fertilizantes, MaterialSiembra, CrianzaAnimales, ControlPlagas, ResumenInspeccion) Values({0}, {1}, '{2}', {3}, '{4}', {5}, '{6}', '{7}')", this.SocioId, this.Fecha, this.Fertilizantes, this.MaterialSiembra, this.CrianzaAnimales, this.ControlPlagas, this.ResumenInspeccion));
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+            return retorno;
+        }
+
         public override bool Borrar()
         {
             bool retorno = false;
@@ -91,22 +108,6 @@ namespace BLL
 
                 throw ex;
             }
-            return retorno;
-        }
-
-        public override bool Insertar()
-        {
-            bool retorno = false;
-            try
-            {
-                retorno = conexion.Ejecutar(String.Format("Insert Into Inspecciones(SocioId, Fecha, Fertilizantes, MaterialSiembra, CrianzaAnimales, ControlPlagas, ResumenInspeccion) Values({0}, '{1}', {2}, '{3}', {4},'{5}', '{6}')",this.SocioId, this.Fecha, this.Fertilizantes, this.MaterialSiembra, this.CrianzaAnimales, this.ControlPlagas,this.ResumenInspeccion));
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-
             return retorno;
         }
 
