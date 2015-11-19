@@ -21,11 +21,16 @@ namespace CocoaExport.Vistas
             InitializeComponent();
         }
 
+       
+
         private void button1_Click(object sender, EventArgs e)
         {
+           
+            
             BLL.Certificaciones registrocer = new BLL.Certificaciones();
             if (SocioIdtextBox.Text.Length == 0)
             {
+                
                 registro.Nombre = NombretextBox.Text;
                 registro.Apellido = ApellidotextBox.Text;
                 registro.Direccion = DirecciontextBox.Text;
@@ -123,6 +128,11 @@ namespace CocoaExport.Vistas
             HectareastextBox.Clear();
             FertNoradioButton.Checked = false;
             FertSiradioButton.Checked = false;
+
+            
+
+           
+
         }
         DataTable table = new DataTable();
         DateTime date = DateTime.Now;
@@ -144,5 +154,30 @@ namespace CocoaExport.Vistas
             chart.DataBind();
 
         }
+
+        private void NombretextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+             
+           
+                if (Char.IsLetter(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else if (Char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else if (char.IsSeparator(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                MessageBox.Show("No acepta numeros este campo");
+               
+                }
+            } 
+    
     }
 }

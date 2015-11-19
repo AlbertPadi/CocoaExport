@@ -33,6 +33,7 @@ namespace CocoaExport.Vistas
             {
                 if (NombretextBox.Text == registro.NombreUsuario && ContrasenatextBox.Text == registro.Contrasena)
                 {
+
                     Principal principal = new Principal();
                     principal.ShowDialog();
                 }
@@ -72,7 +73,7 @@ namespace CocoaExport.Vistas
                     if (NombretextBox.Text == registro.NombreUsuario && ContrasenatextBox.Text == registro.Contrasena)
                     {
                         Principal principal = new Principal();
-                        principal.ShowDialog();
+                        principal.Show();
                     }
 
                 }
@@ -84,6 +85,36 @@ namespace CocoaExport.Vistas
 
 
                 }
+            }
+        }
+
+        private void NombretextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ErrorProvider error = new ErrorProvider();
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+                
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            
+            else if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+                error.SetError(NombretextBox, "No acepta numeros");
+            }
+            else
+            {
+                e.Handled = true;
+                MessageBox.Show("No acepta numeros este campo");
+
             }
         }
     }

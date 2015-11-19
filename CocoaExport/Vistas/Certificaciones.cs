@@ -70,7 +70,9 @@ namespace CocoaExport.Vistas
 
         private void button4_Click(object sender, EventArgs e)
         {
-            IdBuscado = Convert.ToInt32(IDtextBox.Text);
+            int id;
+            int.TryParse(IDtextBox.Text, out id);
+            IdBuscado = id;
             if (registro.Buscar(IdBuscado))
             {
                 registro.CertificacionID = IdBuscado;

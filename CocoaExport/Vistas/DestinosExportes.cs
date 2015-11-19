@@ -94,5 +94,11 @@ namespace CocoaExport.Vistas
                 
             }
         }
+
+        private void DestinosExportes_Load(object sender, EventArgs e)
+        {
+            
+
+        }
     }
 }

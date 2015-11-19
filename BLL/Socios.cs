@@ -33,6 +33,8 @@ namespace BLL
             this.SocioId = 0;
         }
 
+        
+
         public override bool Insertar()
         {
             bool retorno = false;

@@ -261,6 +261,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DestinosExportes";
             this.Text = "Destinos Exportes";
+            this.Load += new System.EventHandler(this.DestinosExportes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
