@@ -12,8 +12,10 @@ namespace CocoaExport.Vistas
 {
     public partial class RegistroSocios : Form
     {
+        double CantTerreno;
         int n;
         int IdBuscado;
+        int socioId;
         BLL.Socios registro = new BLL.Socios();
         public RegistroSocios()
         {
@@ -36,9 +38,11 @@ namespace CocoaExport.Vistas
                 registro.Direccion = DirecciontextBox.Text;
                 registro.Cedula = CedulatextBox.Text;
                 registro.CertificacionId = (int)CertificacioncomboBox.SelectedValue;
-              
 
-                registro.CantidadTerreno = Convert.ToDouble(HectareastextBox.Text);
+
+                double.TryParse(TerrenotextBox.Text, out CantTerreno);
+
+                registro.CantidadTerreno = CantTerreno;
 
                 if (FertSiradioButton.Checked == true)
                 {
@@ -63,15 +67,18 @@ namespace CocoaExport.Vistas
             }
             else
             {
-                registro.SocioId = Convert.ToInt32(SocioIdtextBox.Text);
+                int.TryParse(SocioIdtextBox.Text, out socioId);
+                registro.SocioId = socioId;
 
                 registro.Nombre = NombretextBox.Text;
                 registro.Apellido = ApellidotextBox.Text;
                 registro.Direccion = DirecciontextBox.Text;
                 registro.Cedula = CedulatextBox.Text;
 
-                registro.CantidadTerreno = Convert.ToDouble(HectareastextBox.Text);
-                
+                double.TryParse(TerrenotextBox.Text, out CantTerreno);
+
+                registro.CantidadTerreno = CantTerreno;
+
 
                 if (registro.Editar())
                 {
@@ -86,7 +93,8 @@ namespace CocoaExport.Vistas
 
         private void button3_Click(object sender, EventArgs e)
         {
-            registro.SocioId = Convert.ToInt32(SocioIdtextBox.Text);
+            int.TryParse(SocioIdtextBox.Text, out socioId);
+            registro.SocioId = socioId;
             registro.Eliminar();
         }
 
@@ -102,7 +110,7 @@ namespace CocoaExport.Vistas
                 ApellidotextBox.Text = registro.Apellido;
                 DirecciontextBox.Text = registro.Direccion;
                 CedulatextBox.Text = registro.Cedula.ToString();
-                HectareastextBox.Text = registro.CantidadTerreno.ToString();
+                TerrenotextBox.Text = registro.CantidadTerreno.ToString();
 
                 if (registro.Fertilizantes == 1)
                 {
@@ -125,7 +133,7 @@ namespace CocoaExport.Vistas
             DirecciontextBox.Clear();
             CedulatextBox.Clear();
             SocioIdtextBox.Clear();
-            HectareastextBox.Clear();
+            TerrenotextBox.Clear();
             FertNoradioButton.Checked = false;
             FertSiradioButton.Checked = false;
 

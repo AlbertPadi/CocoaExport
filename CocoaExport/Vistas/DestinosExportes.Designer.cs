@@ -42,13 +42,13 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.Eliminarbutton = new System.Windows.Forms.Button();
-            this.Nuevobutton = new System.Windows.Forms.Button();
-            this.Guardarbutton = new System.Windows.Forms.Button();
             this.DestinoIdtextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.Eliminarbutton = new System.Windows.Forms.Button();
+            this.Nuevobutton = new System.Windows.Forms.Button();
+            this.Guardarbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -67,6 +67,7 @@
             this.PaistextBox.Name = "PaistextBox";
             this.PaistextBox.Size = new System.Drawing.Size(225, 20);
             this.PaistextBox.TabIndex = 1;
+            this.PaistextBox.MouseEnter += new System.EventHandler(this.Guardarbutton_Click);
             // 
             // CodigoDesttextBox
             // 
@@ -166,35 +167,6 @@
             this.label13.TabIndex = 44;
             this.label13.Text = "Guardar";
             // 
-            // Eliminarbutton
-            // 
-            this.Eliminarbutton.Image = global::CocoaExport.Properties.Resources.trash_circle_red_32;
-            this.Eliminarbutton.Location = new System.Drawing.Point(375, 310);
-            this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(104, 34);
-            this.Eliminarbutton.TabIndex = 43;
-            this.Eliminarbutton.UseVisualStyleBackColor = true;
-            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
-            // 
-            // Nuevobutton
-            // 
-            this.Nuevobutton.Image = global::CocoaExport.Properties.Resources.plus_32;
-            this.Nuevobutton.Location = new System.Drawing.Point(249, 310);
-            this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(104, 34);
-            this.Nuevobutton.TabIndex = 42;
-            this.Nuevobutton.UseVisualStyleBackColor = true;
-            // 
-            // Guardarbutton
-            // 
-            this.Guardarbutton.Image = global::CocoaExport.Properties.Resources._1441773161_save;
-            this.Guardarbutton.Location = new System.Drawing.Point(128, 310);
-            this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(104, 34);
-            this.Guardarbutton.TabIndex = 41;
-            this.Guardarbutton.UseVisualStyleBackColor = true;
-            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
-            // 
             // DestinoIdtextBox
             // 
             this.DestinoIdtextBox.Location = new System.Drawing.Point(548, 27);
@@ -231,6 +203,35 @@
             this.button4.TabIndex = 49;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // Eliminarbutton
+            // 
+            this.Eliminarbutton.Image = global::CocoaExport.Properties.Resources.trash_circle_red_32;
+            this.Eliminarbutton.Location = new System.Drawing.Point(375, 310);
+            this.Eliminarbutton.Name = "Eliminarbutton";
+            this.Eliminarbutton.Size = new System.Drawing.Size(104, 34);
+            this.Eliminarbutton.TabIndex = 43;
+            this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
+            // 
+            // Nuevobutton
+            // 
+            this.Nuevobutton.Image = global::CocoaExport.Properties.Resources.plus_32;
+            this.Nuevobutton.Location = new System.Drawing.Point(249, 310);
+            this.Nuevobutton.Name = "Nuevobutton";
+            this.Nuevobutton.Size = new System.Drawing.Size(104, 34);
+            this.Nuevobutton.TabIndex = 42;
+            this.Nuevobutton.UseVisualStyleBackColor = true;
+            // 
+            // Guardarbutton
+            // 
+            this.Guardarbutton.Image = global::CocoaExport.Properties.Resources._1441773161_save;
+            this.Guardarbutton.Location = new System.Drawing.Point(128, 310);
+            this.Guardarbutton.Name = "Guardarbutton";
+            this.Guardarbutton.Size = new System.Drawing.Size(104, 34);
+            this.Guardarbutton.TabIndex = 41;
+            this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
             // DestinosExportes
             // 

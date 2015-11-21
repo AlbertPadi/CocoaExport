@@ -233,7 +233,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(38, 36);
+            this.label2.Location = new System.Drawing.Point(38, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 16);
             this.label2.TabIndex = 47;
@@ -241,7 +241,8 @@
             // 
             // FechadateTimePicker
             // 
-            this.FechadateTimePicker.Location = new System.Drawing.Point(172, 36);
+            this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.FechadateTimePicker.Location = new System.Drawing.Point(137, 13);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
             this.FechadateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.FechadateTimePicker.TabIndex = 45;
@@ -251,7 +252,7 @@
             this.FertgroupBox.Controls.Add(this.FertNoradioButton);
             this.FertgroupBox.Controls.Add(this.FertSiradioButton);
             this.FertgroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FertgroupBox.Location = new System.Drawing.Point(37, 78);
+            this.FertgroupBox.Location = new System.Drawing.Point(50, 52);
             this.FertgroupBox.Name = "FertgroupBox";
             this.FertgroupBox.Size = new System.Drawing.Size(350, 93);
             this.FertgroupBox.TabIndex = 53;

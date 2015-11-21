@@ -12,8 +12,9 @@ namespace CocoaExport.Vistas
 {
     public partial class DestinosExportes : Form
     {
-        int idBus;
+    
         int IdBuscado;
+        int CodigoPost;
         int DestinoId;
         BLL.DestinosExportes destino = new BLL.DestinosExportes();
         public DestinosExportes()
@@ -29,7 +30,8 @@ namespace CocoaExport.Vistas
                 destino.CodigoDestino = CodigoDesttextBox.Text;
                 destino.NombreDestino = NombreDesttextBox.Text;
                 destino.Direccion = DireccionDesttextBox.Text;
-                destino.CodigoPostal = Convert.ToInt32(CodigoPosttextBox.Text);
+                int.TryParse(CodigoDesttextBox.Text, out CodigoPost);
+                destino.CodigoPostal = CodigoPost;
 
 
                 if (destino.Insertar())
@@ -43,8 +45,8 @@ namespace CocoaExport.Vistas
             }
             else
             {
-                destino.DestinosId = Convert.ToInt32(DestinoIdtextBox.Text);
-
+                int.TryParse(DestinoIdtextBox.Text, out DestinoId);
+                destino.DestinosId = DestinoId;
                 destino.Pais = PaistextBox.Text;
                 destino.CodigoDestino = CodigoDesttextBox.Text;
                 destino.NombreDestino = NombreDesttextBox.Text;
@@ -62,11 +64,13 @@ namespace CocoaExport.Vistas
                 }
             }
             
+
         }
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
-            destino.DestinosId = Convert.ToInt32(DestinoIdtextBox.Text);
+            int.TryParse(DestinoIdtextBox.Text, out DestinoId);
+            destino.DestinosId = DestinoId;
             if (destino.Eliminar())
             {
                 MessageBox.Show("Se han borrado los datos");

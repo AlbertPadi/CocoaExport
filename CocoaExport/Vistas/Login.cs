@@ -36,6 +36,7 @@ namespace CocoaExport.Vistas
 
                     Principal principal = new Principal();
                     principal.Show();
+                    this.Visible = false;
                 }
                 
             }
@@ -47,7 +48,7 @@ namespace CocoaExport.Vistas
 
 
             }
-            this.Visible = false;
+ 
 
         }
 
@@ -75,6 +76,7 @@ namespace CocoaExport.Vistas
                     {
                         Principal principal = new Principal();
                         principal.Show();
+                        this.Visible = false;
                     }
 
                 }
@@ -87,36 +89,25 @@ namespace CocoaExport.Vistas
 
                 }
             }
+            
         }
 
         private void NombretextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            ErrorProvider error = new ErrorProvider();
-            if (Char.IsLetter(e.KeyChar))
+            if (char.IsSeparator(e.KeyChar))
             {
-                e.Handled = false;
-                
-            }
-            else if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = false;
+                e.Handled = true;
             }
             
-            else if (Char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-                error.SetError(NombretextBox, "No acepta numeros");
-            }
-            else
-            {
-                e.Handled = true;
-                MessageBox.Show("No acepta numeros este campo");
+        }
 
+        private void ContrasenatextBox_KeyDown(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = true;
             }
+            
         }
     }
 }

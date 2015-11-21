@@ -91,8 +91,7 @@ namespace BLL
             string ordenFinal = " ";
             if (!Orden.Equals(""))
                 ordenFinal = " Orden By " + Orden;
-
-
+            
             return conexion.getDatos(" Select " + Campos + " from Certificaciones where " + Condicion + ordenFinal);
         }
     }

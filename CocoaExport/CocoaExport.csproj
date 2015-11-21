@@ -47,35 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Vistas\CentrosdeAcopio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\CentrosdeAcopio.Designer.cs">
-      <DependentUpon>CentrosdeAcopio.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vistas\Certificaciones.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\Certificaciones.Designer.cs">
       <DependentUpon>Certificaciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\ControldeLotes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\ControldeLotes.Designer.cs">
-      <DependentUpon>ControldeLotes.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vistas\DestinosExportes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\DestinosExportes.Designer.cs">
       <DependentUpon>DestinosExportes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Exportacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Exportacion.Designer.cs">
-      <DependentUpon>Exportacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Login.cs">
       <SubType>Form</SubType>
@@ -103,6 +85,18 @@
     <Compile Include="Vistas\RegistroDeInspecciones.Designer.cs">
       <DependentUpon>RegistroDeInspecciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\RegistroExportacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\RegistroExportacion.Designer.cs">
+      <DependentUpon>RegistroExportacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\RegistroLote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\RegistroLote.Designer.cs">
+      <DependentUpon>RegistroLote.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\RegistroSocios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,20 +109,11 @@
     <Compile Include="Vistas\RegistroUsuarios.Designer.cs">
       <DependentUpon>RegistroUsuarios.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Vistas\CentrosdeAcopio.resx">
-      <DependentUpon>CentrosdeAcopio.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Certificaciones.resx">
       <DependentUpon>Certificaciones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\ControldeLotes.resx">
-      <DependentUpon>ControldeLotes.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\DestinosExportes.resx">
       <DependentUpon>DestinosExportes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Exportacion.resx">
-      <DependentUpon>Exportacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -151,6 +136,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\RegistroDeInspecciones.resx">
       <DependentUpon>RegistroDeInspecciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\RegistroExportacion.resx">
+      <DependentUpon>RegistroExportacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\RegistroLote.resx">
+      <DependentUpon>RegistroLote.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\RegistroSocios.resx">
       <DependentUpon>RegistroSocios.cs</DependentUpon>
@@ -218,6 +209,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logo CocoaExport Proyect1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconoCocoa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconoCocoa1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo CocoaExport 2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

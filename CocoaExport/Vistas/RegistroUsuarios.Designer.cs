@@ -47,6 +47,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
+            this.UsuarioIdtextBox = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -139,7 +141,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(67, 187);
+            this.label6.Location = new System.Drawing.Point(104, 187);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 16);
             this.label6.TabIndex = 13;
@@ -149,7 +151,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(237, 187);
+            this.label7.Location = new System.Drawing.Point(248, 187);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 16);
             this.label7.TabIndex = 14;
@@ -192,11 +194,12 @@
             this.button2.Size = new System.Drawing.Size(95, 34);
             this.button2.TabIndex = 12;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
             this.button1.Image = global::CocoaExport.Properties.Resources.plus_32;
-            this.button1.Location = new System.Drawing.Point(213, 150);
+            this.button1.Location = new System.Drawing.Point(224, 150);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 34);
             this.button1.TabIndex = 11;
@@ -206,12 +209,29 @@
             // Guardarbutton
             // 
             this.Guardarbutton.Image = global::CocoaExport.Properties.Resources._1441773161_save;
-            this.Guardarbutton.Location = new System.Drawing.Point(47, 150);
+            this.Guardarbutton.Location = new System.Drawing.Point(84, 150);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(95, 34);
             this.Guardarbutton.TabIndex = 5;
             this.Guardarbutton.UseVisualStyleBackColor = true;
             this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
+            // 
+            // UsuarioIdtextBox
+            // 
+            this.UsuarioIdtextBox.Location = new System.Drawing.Point(459, 113);
+            this.UsuarioIdtextBox.Name = "UsuarioIdtextBox";
+            this.UsuarioIdtextBox.Size = new System.Drawing.Size(110, 20);
+            this.UsuarioIdtextBox.TabIndex = 18;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(357, 117);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(79, 16);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "Usuario Id";
             // 
             // RegistroUsuarios
             // 
@@ -219,6 +239,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
             this.ClientSize = new System.Drawing.Size(673, 234);
+            this.Controls.Add(this.UsuarioIdtextBox);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.Buscarlabel);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.label8);
@@ -266,5 +288,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.Label Buscarlabel;
+        private System.Windows.Forms.TextBox UsuarioIdtextBox;
+        private System.Windows.Forms.Label label9;
     }
 }

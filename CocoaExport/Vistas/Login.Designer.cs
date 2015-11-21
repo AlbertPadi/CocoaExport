@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.label1 = new System.Windows.Forms.Label();
             this.NombretextBox = new System.Windows.Forms.TextBox();
             this.ContrasenatextBox = new System.Windows.Forms.TextBox();
@@ -60,6 +61,7 @@
             this.NombretextBox.Size = new System.Drawing.Size(215, 20);
             this.NombretextBox.TabIndex = 0;
             this.NombretextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombretextBox_KeyPress);
+            this.NombretextBox.MouseEnter += new System.EventHandler(this.Entrarbutton_Click);
             // 
             // ContrasenatextBox
             // 
@@ -70,6 +72,7 @@
             this.ContrasenatextBox.UseSystemPasswordChar = true;
             this.ContrasenatextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.ContrasenatextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ContrasenatextBox_KeyDown);
+            this.ContrasenatextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ContrasenatextBox_KeyDown);
             // 
             // Clave
             // 
@@ -149,6 +152,7 @@
             this.Controls.Add(this.NombretextBox);
             this.Controls.Add(this.Entrarbutton);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);

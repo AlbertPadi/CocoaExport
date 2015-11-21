@@ -14,7 +14,7 @@ namespace CocoaExport.Vistas
     public partial class Certificaciones : Form
     {
         int IdBuscado;
-        //BLL.Certificaciones registro = new BLL.Certificaciones();
+        int certificacionId;
         BLL.Certificaciones registro = new BLL.Certificaciones();
 
         public Certificaciones()
@@ -24,7 +24,7 @@ namespace CocoaExport.Vistas
 
         private void Certificaciones_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -45,7 +45,8 @@ namespace CocoaExport.Vistas
             }
             else
             {
-                registro.CertificacionID = Convert.ToInt32(IDtextBox.Text);
+                int.TryParse(IDtextBox.Text, out certificacionId);
+                registro.CertificacionID = certificacionId;
 
                 registro.Descripcion = DescripciontextBox.Text;
      
@@ -84,6 +85,16 @@ namespace CocoaExport.Vistas
         {
             IDtextBox.Clear();
             DescripciontextBox.Clear();
+        }
+
+        private void DescripciontextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IDtextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

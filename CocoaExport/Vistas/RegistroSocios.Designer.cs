@@ -39,7 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.DirecciontextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.HectareastextBox = new System.Windows.Forms.TextBox();
+            this.TerrenotextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.CedulatextBox = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -124,12 +124,12 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Terreno";
             // 
-            // HectareastextBox
+            // TerrenotextBox
             // 
-            this.HectareastextBox.Location = new System.Drawing.Point(473, 142);
-            this.HectareastextBox.Name = "HectareastextBox";
-            this.HectareastextBox.Size = new System.Drawing.Size(193, 20);
-            this.HectareastextBox.TabIndex = 5;
+            this.TerrenotextBox.Location = new System.Drawing.Point(473, 142);
+            this.TerrenotextBox.Name = "TerrenotextBox";
+            this.TerrenotextBox.Size = new System.Drawing.Size(193, 20);
+            this.TerrenotextBox.TabIndex = 5;
             // 
             // label7
             // 
@@ -339,7 +339,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.CedulatextBox);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.HectareastextBox);
+            this.Controls.Add(this.TerrenotextBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.DirecciontextBox);
             this.Controls.Add(this.label2);
@@ -369,7 +369,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox DirecciontextBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox HectareastextBox;
+        private System.Windows.Forms.TextBox TerrenotextBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox CedulatextBox;
         private System.Windows.Forms.Button button2;

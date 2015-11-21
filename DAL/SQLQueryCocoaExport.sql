@@ -9,7 +9,7 @@ create table Usuarios(
 			Direccion varchar(50),
 			NombreUsuario varchar(40), 
 			Contrasena varchar(100));
-
+			select *from Usuarios
 					
 create table Certificaciones(
 			CertificacionId int primary key identity, 
@@ -52,26 +52,34 @@ create table Recepciones(
 			TipoCacaoId int References TiposCacao(TipoCacaoId),
 			Observacion varchar(200), 
 			RecibidoPor varchar(50));
-
+			drop table Recepciones
 						
---detalle							 
+						 
 create table Lotes(
-			LoteId int primary key identity, 
+			LoteId int primary key identity,
 			CodigoLote varchar(20), 
 			Total float, 
 			CertificacionId int References Certificaciones(CertificacionId),
 			Fecha varchar(20));
 
-			drop table Lotes
+	insert into Lotes(CodigoLote, Total) values('025SGS', 500);
+	select*from Lotes
 
---detalle recepcion lotes								
+create table LotesExportes(
+			LoteId int References Lotes(LoteId), 
+			ExportacionId int References Exportaciones(ExportacionId), 
+			CodigoLote varchar(20));
+
+			select *from LotesExportes
+		
+			select e.CodigoLote from Exportaciones l inner join LotesExportes e on l.ExportacionId = e.ExportacionId where e.ExportacionId = 3	
 create table RecepcionLotes(
 			RecepcionId int, 
 			CertificacionId int, 
 			Fecha varchar(10), 
 			CantidadPesada float, 
 			Observacion varchar(200));
-
+			drop table RecepcionLotes
 select *from RecepcionLotes
 
 
@@ -85,10 +93,24 @@ create table DestinosExportes(
 			select *from DestinosExportes
 	
 create table Exportaciones(
-			ExportacionId int primary key identity, 
-			DestinoId int References DestinosExportes(DestinosId), 
-			CantidadToneladas float, 
-			Certificacion int References Certificaciones(CertificacionId), 
-			Fecha varchar(20), 
-			LoteId int References Lotes(LoteId), 
-			Resumen varchar(300));
+			 ExportacionId int primary key identity, 
+			 DestinoId int References DestinosExportes(DestinosId), 
+			 CantidadToneladas float, 
+			 CertificacionId int References Certificaciones(CertificacionId), 
+			 Fecha varchar(20), 
+			 LoteId int References Lotes(LoteId), 
+			 Resumen varchar(300));
+
+			 select *from Exportaciones
+
+			 drop table Exportaciones
+
+create table DestinosExportacion(
+			 DestinoExpId int primary key identity,
+			 ExportacionId int References Exportaciones(ExportacionId),
+			 Pais varchar(50), 
+			 NombreDestino varchar(50), 
+			 Direccion varchar(50), 
+			 Codigopostal int);
+			select *from DestinosExportacion
+			drop table DestinosExportacion

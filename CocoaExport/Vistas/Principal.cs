@@ -13,6 +13,7 @@ namespace CocoaExport
 {
     public partial class Principal : Form
     {
+        Login login = new Login();
         public Principal()
         {
             InitializeComponent();
@@ -67,12 +68,15 @@ namespace CocoaExport
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
+         
             this.Close();
+
         }
 
         private void configuracionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            login.Show();
+            this.Close();
            
         }
 
@@ -97,6 +101,28 @@ namespace CocoaExport
         {
             RegistroDeInspecciones Inspecciones = new RegistroDeInspecciones();
             Inspecciones.Show();
+        }
+
+        private void exportacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void registroToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            RegistroExportacion registro = new RegistroExportacion();
+            registro.Show();
+        }
+
+        private void registroToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            RegistroLote control = new RegistroLote();
+            control.Show();
+        }
+
+        private void sistemaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

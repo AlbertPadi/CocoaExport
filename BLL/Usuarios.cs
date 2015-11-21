@@ -12,32 +12,27 @@ namespace BLL
     public class Usuarios : ClaseMaestra
     {
         Conexion conexion = new Conexion();
+
+        public int UsuarioId { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Direccion { get; set; }
         public string NombreUsuario { get; set; }
         public string Contrasena { get; set; }
-        public int UsuarioId { get; set; }
+        
 
         public Usuarios()
         {
+            this.UsuarioId = 0;
             this.Nombre = "";
             this.Apellido = "";
             this.Direccion = "";
             this.NombreUsuario = "";
             this.Contrasena = "";
-            this.UsuarioId = 0;
+            
         }
 
-        public Usuarios(string nombre, string apellido, string direccion, string nombreusuario, string contrasena, int usuarioid)
-        {
-            this.Nombre = nombre;
-            this.Apellido = apellido;
-            this.Direccion = direccion;
-            this.NombreUsuario = nombreusuario;
-            this.Contrasena = contrasena;
-            this.UsuarioId = usuarioid;
-        }
+       
 
         public bool Login()
         {
@@ -58,7 +53,7 @@ namespace BLL
         }
         public override bool Eliminar()
         {
-            return conexion.Ejecutar(String.Format("Delete *From where UsuarioId= {0}", this.UsuarioId));
+            return conexion.Ejecutar(String.Format("Delete From Usuarios where UsuarioId = {0}", this.UsuarioId));
         }
 
         public override bool Buscar(int IdBuscado)

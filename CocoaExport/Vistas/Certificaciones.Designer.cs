@@ -33,13 +33,13 @@
             this.IDtextBox = new System.Windows.Forms.TextBox();
             this.DescripciontextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // IDlabel
@@ -68,6 +68,7 @@
             this.IDtextBox.Name = "IDtextBox";
             this.IDtextBox.Size = new System.Drawing.Size(100, 20);
             this.IDtextBox.TabIndex = 2;
+            this.IDtextBox.TextChanged += new System.EventHandler(this.IDtextBox_TextChanged);
             // 
             // DescripciontextBox
             // 
@@ -75,6 +76,7 @@
             this.DescripciontextBox.Name = "DescripciontextBox";
             this.DescripciontextBox.Size = new System.Drawing.Size(152, 20);
             this.DescripciontextBox.TabIndex = 3;
+            this.DescripciontextBox.TextChanged += new System.EventHandler(this.DescripciontextBox_TextChanged);
             // 
             // label6
             // 
@@ -86,16 +88,6 @@
             this.label6.TabIndex = 22;
             this.label6.Text = "Guardar";
             // 
-            // button1
-            // 
-            this.button1.Image = global::CocoaExport.Properties.Resources._1441773161_save;
-            this.button1.Location = new System.Drawing.Point(23, 192);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 34);
-            this.button1.TabIndex = 21;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -106,16 +98,6 @@
             this.label8.TabIndex = 24;
             this.label8.Text = "Nuevo";
             // 
-            // button2
-            // 
-            this.button2.Image = global::CocoaExport.Properties.Resources.plus_32;
-            this.button2.Location = new System.Drawing.Point(133, 192);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 34);
-            this.button2.TabIndex = 23;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -125,16 +107,6 @@
             this.label9.Size = new System.Drawing.Size(64, 16);
             this.label9.TabIndex = 26;
             this.label9.Text = "Eliminar";
-            // 
-            // button3
-            // 
-            this.button3.Image = global::CocoaExport.Properties.Resources.trash_circle_red_32;
-            this.button3.Location = new System.Drawing.Point(243, 192);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 34);
-            this.button3.TabIndex = 25;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label10
             // 
@@ -155,6 +127,36 @@
             this.button4.TabIndex = 27;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.Image = global::CocoaExport.Properties.Resources.trash_circle_red_32;
+            this.button3.Location = new System.Drawing.Point(243, 192);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(104, 34);
+            this.button3.TabIndex = 25;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Image = global::CocoaExport.Properties.Resources.plus_32;
+            this.button2.Location = new System.Drawing.Point(133, 192);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(104, 34);
+            this.button2.TabIndex = 23;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Image = global::CocoaExport.Properties.Resources._1441773161_save;
+            this.button1.Location = new System.Drawing.Point(23, 192);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 34);
+            this.button1.TabIndex = 21;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Certificaciones
             // 

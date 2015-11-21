@@ -99,7 +99,11 @@ namespace BLL
         
         public override DataTable Listar(string Campos, string Condicion, string Orden)
         {
-            throw new NotImplementedException();
+            string ordenFinal = " ";
+            if (!Orden.Equals(""))
+                ordenFinal = " Orden By " + Orden;
+
+            return conexion.getDatos(" Select " + Campos + " from DestinosExportes where " + Condicion + ordenFinal);
         }
     }
 }
