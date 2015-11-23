@@ -18,7 +18,10 @@ namespace BLL
         public string Fecha { get; set; }
         public int ExportacionId { get; set; }
 
-
+        public DataTable obtener(string Lote)
+        {
+            return conexion.getDatos(String.Format("select LoteId from Lotes where CodigoLote = {0}", Lote));
+        }
         public Lotes()
         {
             this.LoteId = 0;
@@ -116,7 +119,7 @@ namespace BLL
              string ordenFinal = "";
              if (!Orden.Equals(""))
                  ordenFinal = " Orden By " + Orden;
-             return conexion.getDatos(" Select " + Campos + " From Lotes Where " + Condicion + " " + ordenFinal);
+             return conexion.getDatos(String.Format(" Select " + Campos + " From Lotes Where " + Condicion + " " + ordenFinal));
             
         }
     }

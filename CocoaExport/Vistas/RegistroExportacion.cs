@@ -60,10 +60,8 @@ namespace CocoaExport.Vistas
                 for (int i = 0; i < LoteslistBox.Items.Count; i++)
                  {
                      Lotes lotes = new Lotes();
-                     int id = (int)LoteIdcomboBox.SelectedValue;
-                     
-
-                     exportacion.AgregarLotes(id, LoteIdcomboBox.Items[i].ToString());
+                    lotes.LoteId = (int)LoteIdcomboBox.SelectedValue;
+                    exportacion.AgregarLotes(lotes.LoteId,LoteslistBox.Items[i].ToString());
                  }
                  if (exportacion.Insertar())
                  {

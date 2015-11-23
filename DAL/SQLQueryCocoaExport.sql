@@ -70,11 +70,11 @@ create table Lotes(
 	--detalle
 create table LotesExportes(
 			LoteId int References Lotes(LoteId), 
-			ExportacionId int References Exportaciones(ExportacionId), 
-			CodigoLote varchar(20));
+			ExportacionId int References Exportaciones(ExportacionId));
+
 			select *from LotesExportes
 		    drop table LotesExportes
-			select e.CodigoLote from Exportaciones l inner join LotesExportes e on l.ExportacionId = e.ExportacionId where e.ExportacionId = 3	
+			select e.CodigoLote from Exportaciones l inner join LotesExportes e on l.ExportacionId = e.ExportacionId where e.ExportacionId = 15
 
 create table RecepcionLotes(
 			RecepcionId int, 

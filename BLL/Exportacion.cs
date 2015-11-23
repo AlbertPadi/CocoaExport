@@ -48,7 +48,7 @@ namespace BLL
                         this.ExportacionId = (int)conexion.getDatos("Select Max(ExportacionId) as ExportacionId from Exportaciones").Rows[0]["ExportacionId"];
                     foreach (var lote in this.Lotes)
                     {
-                        Comando.AppendLine(String.Format("Insert Into LotesExportes (LoteId, ExportacionId, CodigoLote) Values({0},{1},'{2}')",lote.LoteId,this.ExportacionId, lote.CodigoLote));
+                        Comando.AppendLine(String.Format("Insert Into LotesExportes(LoteId, CodigoLote, ExportacionId) Values({0},'{1}', {2})",lote.LoteId, lote.CodigoLote, this.ExportacionId));
                     }
                     retorno = conexion.Ejecutar(Comando.ToString());
                 }
