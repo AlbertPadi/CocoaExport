@@ -62,7 +62,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 21);
+            this.label1.Location = new System.Drawing.Point(28, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 16);
             this.label1.TabIndex = 0;
@@ -79,7 +79,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 74);
+            this.label2.Location = new System.Drawing.Point(28, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 16);
             this.label2.TabIndex = 2;
@@ -136,7 +136,7 @@
             this.CertificacionIdcomboBox.FormattingEnabled = true;
             this.CertificacionIdcomboBox.Items.AddRange(new object[] {
             ""});
-            this.CertificacionIdcomboBox.Location = new System.Drawing.Point(550, 70);
+            this.CertificacionIdcomboBox.Location = new System.Drawing.Point(550, 76);
             this.CertificacionIdcomboBox.Name = "CertificacionIdcomboBox";
             this.CertificacionIdcomboBox.Size = new System.Drawing.Size(221, 21);
             this.CertificacionIdcomboBox.TabIndex = 4;
@@ -161,6 +161,7 @@
             this.DestinosIdcomboBox.Name = "DestinosIdcomboBox";
             this.DestinosIdcomboBox.Size = new System.Drawing.Size(221, 21);
             this.DestinosIdcomboBox.TabIndex = 5;
+            this.DestinosIdcomboBox.SelectedIndexChanged += new System.EventHandler(this.DestinosIdcomboBox_SelectedIndexChanged);
             // 
             // Buscarlabel
             // 
@@ -214,7 +215,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 126);
+            this.label3.Location = new System.Drawing.Point(28, 131);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 16);
             this.label3.TabIndex = 28;
@@ -263,7 +264,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CocoaExport.Properties.Resources.IconoCocoa1;
-            this.pictureBox1.Location = new System.Drawing.Point(573, 160);
+            this.pictureBox1.Location = new System.Drawing.Point(566, 179);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(167, 154);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -341,7 +342,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegistroExportacion";
-            this.Text = "RegistroExportacion";
+            this.Text = "Registro Exportacion";
             this.Load += new System.EventHandler(this.RegistroExportacion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

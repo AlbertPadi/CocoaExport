@@ -67,7 +67,7 @@
             this.PaistextBox.Name = "PaistextBox";
             this.PaistextBox.Size = new System.Drawing.Size(225, 20);
             this.PaistextBox.TabIndex = 1;
-            this.PaistextBox.MouseEnter += new System.EventHandler(this.Guardarbutton_Click);
+            this.PaistextBox.TextChanged += new System.EventHandler(this.PaistextBox_TextChanged);
             // 
             // CodigoDesttextBox
             // 

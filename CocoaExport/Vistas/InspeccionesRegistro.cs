@@ -11,12 +11,12 @@ using BLL;
 
 namespace CocoaExport.Vistas
 {
-    public partial class RegistroDeInspecciones : Form
+    public partial class InspeccionesRegistro : Form
     {
         int IdBuscado;
         int Num;
         Inspeciones Registro = new Inspeciones();
-        public RegistroDeInspecciones()
+        public InspeccionesRegistro()
         {
             
             InitializeComponent();
@@ -77,7 +77,7 @@ namespace CocoaExport.Vistas
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
-            RegistroDeInspecciones RegistroInsp = new RegistroDeInspecciones();
+            InspeccionesRegistro RegistroInsp = new InspeccionesRegistro();
             if (IdInsptextBox.Text.Length == 0)
             {
                 Registro.Fecha = FechadateTimePicker.Text;

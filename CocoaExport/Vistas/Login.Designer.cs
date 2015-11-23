@@ -60,7 +60,6 @@
             this.NombretextBox.Name = "NombretextBox";
             this.NombretextBox.Size = new System.Drawing.Size(215, 20);
             this.NombretextBox.TabIndex = 0;
-            this.NombretextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombretextBox_KeyPress);
             this.NombretextBox.MouseEnter += new System.EventHandler(this.Entrarbutton_Click);
             // 
             // ContrasenatextBox
@@ -71,7 +70,6 @@
             this.ContrasenatextBox.TabIndex = 1;
             this.ContrasenatextBox.UseSystemPasswordChar = true;
             this.ContrasenatextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.ContrasenatextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ContrasenatextBox_KeyDown);
             this.ContrasenatextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ContrasenatextBox_KeyDown);
             // 
             // Clave

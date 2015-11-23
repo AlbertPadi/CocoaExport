@@ -46,7 +46,7 @@ namespace CocoaExport.Vistas
             else
             {
                 int.TryParse(DestinoIdtextBox.Text, out DestinoId);
-                destino.DestinosId = DestinoId;
+                destino.DestinoId = DestinoId;
                 destino.Pais = PaistextBox.Text;
                 destino.CodigoDestino = CodigoDesttextBox.Text;
                 destino.NombreDestino = NombreDesttextBox.Text;
@@ -70,7 +70,7 @@ namespace CocoaExport.Vistas
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
             int.TryParse(DestinoIdtextBox.Text, out DestinoId);
-            destino.DestinosId = DestinoId;
+            destino.DestinoId = DestinoId;
             if (destino.Eliminar())
             {
                 MessageBox.Show("Se han borrado los datos");
@@ -89,7 +89,7 @@ namespace CocoaExport.Vistas
 
             if (destino.Buscar(IdBuscado))
             {
-                destino.DestinosId = IdBuscado;
+                destino.DestinoId = IdBuscado;
                 PaistextBox.Text = destino.Pais;
                 CodigoDesttextBox.Text = destino.CodigoDestino;
                 NombreDesttextBox.Text = destino.NombreDestino;
@@ -102,6 +102,11 @@ namespace CocoaExport.Vistas
         private void DestinosExportes_Load(object sender, EventArgs e)
         {
             
+
+        }
+
+        private void PaistextBox_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

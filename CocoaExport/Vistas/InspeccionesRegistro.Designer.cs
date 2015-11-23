@@ -1,6 +1,6 @@
 ﻿namespace CocoaExport.Vistas
 {
-    partial class RegistroDeInspecciones
+    partial class InspeccionesRegistro
     {
         /// <summary>
         /// Required designer variable.

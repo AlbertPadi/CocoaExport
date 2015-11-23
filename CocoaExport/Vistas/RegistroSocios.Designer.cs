@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroSocios));
             this.NombretextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,24 +39,22 @@
             this.TerrenotextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.CedulatextBox = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.FertSiradioButton = new System.Windows.Forms.RadioButton();
             this.FertNoradioButton = new System.Windows.Forms.RadioButton();
             this.FertilizantesgroupBox = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.CertificacioncomboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.SocioIdtextBox = new System.Windows.Forms.TextBox();
-            this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.FertilizantesgroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
             this.SuspendLayout();
             // 
             // NombretextBox
@@ -148,26 +143,6 @@
             this.CedulatextBox.Size = new System.Drawing.Size(193, 20);
             this.CedulatextBox.TabIndex = 3;
             // 
-            // button2
-            // 
-            this.button2.Image = global::CocoaExport.Properties.Resources.plus_32;
-            this.button2.Location = new System.Drawing.Point(225, 295);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 34);
-            this.button2.TabIndex = 15;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Image = global::CocoaExport.Properties.Resources.trash_circle_red_32;
-            this.button3.Location = new System.Drawing.Point(366, 295);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 34);
-            this.button3.TabIndex = 16;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // FertSiradioButton
             // 
             this.FertSiradioButton.AutoSize = true;
@@ -208,7 +183,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(111, 332);
+            this.label6.Location = new System.Drawing.Point(209, 336);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 16);
             this.label6.TabIndex = 20;
@@ -218,7 +193,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(252, 332);
+            this.label8.Location = new System.Drawing.Point(350, 336);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 16);
             this.label8.TabIndex = 21;
@@ -228,41 +203,21 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(386, 332);
+            this.label9.Location = new System.Drawing.Point(484, 336);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(64, 16);
             this.label9.TabIndex = 22;
             this.label9.Text = "Eliminar";
             // 
-            // button1
-            // 
-            this.button1.Image = global::CocoaExport.Properties.Resources._1441773161_save;
-            this.button1.Location = new System.Drawing.Point(91, 295);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 34);
-            this.button1.TabIndex = 7;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(526, 332);
+            this.label10.Location = new System.Drawing.Point(613, 67);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(56, 16);
             this.label10.TabIndex = 24;
             this.label10.Text = "Buscar";
-            // 
-            // button4
-            // 
-            this.button4.Image = global::CocoaExport.Properties.Resources._1443814210_fine_print;
-            this.button4.Location = new System.Drawing.Point(506, 295);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(104, 34);
-            this.button4.TabIndex = 23;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // CertificacioncomboBox
             // 
@@ -298,32 +253,55 @@
             // 
             this.SocioIdtextBox.Location = new System.Drawing.Point(473, 30);
             this.SocioIdtextBox.Name = "SocioIdtextBox";
-            this.SocioIdtextBox.Size = new System.Drawing.Size(193, 20);
+            this.SocioIdtextBox.Size = new System.Drawing.Size(109, 20);
             this.SocioIdtextBox.TabIndex = 27;
             // 
-            // chart
+            // button4
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart.Legends.Add(legend1);
-            this.chart.Location = new System.Drawing.Point(672, 27);
-            this.chart.Name = "chart";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart.Series.Add(series1);
-            this.chart.Size = new System.Drawing.Size(300, 300);
-            this.chart.TabIndex = 29;
-            this.chart.Text = "chart1";
+            this.button4.Image = global::CocoaExport.Properties.Resources._1443814210_fine_print;
+            this.button4.Location = new System.Drawing.Point(588, 30);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(104, 34);
+            this.button4.TabIndex = 23;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.Image = global::CocoaExport.Properties.Resources.trash_circle_red_32;
+            this.button3.Location = new System.Drawing.Point(464, 299);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(104, 34);
+            this.button3.TabIndex = 16;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Image = global::CocoaExport.Properties.Resources.plus_32;
+            this.button2.Location = new System.Drawing.Point(323, 299);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(104, 34);
+            this.button2.TabIndex = 15;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Image = global::CocoaExport.Properties.Resources._1441773161_save;
+            this.button1.Location = new System.Drawing.Point(189, 299);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 34);
+            this.button1.TabIndex = 7;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // RegistroSocios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
-            this.ClientSize = new System.Drawing.Size(986, 378);
-            this.Controls.Add(this.chart);
+            this.ClientSize = new System.Drawing.Size(705, 378);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.SocioIdtextBox);
             this.Controls.Add(this.label4);
@@ -353,7 +331,6 @@
             this.Load += new System.EventHandler(this.RegistroSocios_Load);
             this.FertilizantesgroupBox.ResumeLayout(false);
             this.FertilizantesgroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -386,6 +363,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox SocioIdtextBox;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart;
     }
 }

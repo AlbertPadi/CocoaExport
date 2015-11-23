@@ -16,7 +16,8 @@ namespace BLL
         public string CodigoLote { get; set; }
         public int CertificacionId { get; set; }
         public string Fecha { get; set; }
-        
+        public int ExportacionId { get; set; }
+
 
         public Lotes()
         {
@@ -25,12 +26,14 @@ namespace BLL
             this.CodigoLote = "";
             this.CertificacionId = 0;
             this.Fecha = "";
-            
+            this.ExportacionId = 0;
+
         }
         public Lotes(int loteId, string codigoLote)
         {
             this.LoteId = loteId;
             this.CodigoLote = codigoLote;
+            
         }
 
         

@@ -11,6 +11,7 @@ namespace BLL
     public class Socios:ClaseMaestra
     {
         Conexion conexion = new Conexion();
+        public int SocioId { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Direccion { get; set; }
@@ -18,7 +19,7 @@ namespace BLL
         public int CertificacionId { get; set; }
         public double CantidadTerreno { get; set; }
         public int Fertilizantes { get; set; }
-        public int SocioId { get; set; }
+        
 
 
         public Socios()
@@ -56,7 +57,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-                retorno = conexion.Ejecutar(String.Format("Update Socios Set Nombre='{0}', Apellido='{1}', Direccion='{2}', Cedula={3}, CantidadTerreno={4}, Fertilizantes={5} where SocioId={6}", this.Nombre, this.Apellido, this.Direccion, this.Cedula, this.CantidadTerreno, this.Fertilizantes, this.SocioId));
+                retorno = conexion.Ejecutar(String.Format("Update Socios Set Nombre='{0}', Apellido='{1}', Direccion='{2}', Cedula={3}, CertificacionId={4}, CantidadTerreno={5}, Fertilizantes={6} where SocioId={7}", this.Nombre, this.Apellido, this.Direccion, this.Cedula, this.CertificacionId, this.CantidadTerreno, this.Fertilizantes, this.SocioId));
             }
             catch (Exception ex)
             {

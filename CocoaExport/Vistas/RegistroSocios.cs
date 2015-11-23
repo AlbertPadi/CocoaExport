@@ -74,7 +74,7 @@ namespace CocoaExport.Vistas
                 registro.Apellido = ApellidotextBox.Text;
                 registro.Direccion = DirecciontextBox.Text;
                 registro.Cedula = CedulatextBox.Text;
-
+                registro.CertificacionId = (int)CertificacioncomboBox.SelectedValue;
                 double.TryParse(TerrenotextBox.Text, out CantTerreno);
 
                 registro.CantidadTerreno = CantTerreno;
@@ -95,7 +95,14 @@ namespace CocoaExport.Vistas
         {
             int.TryParse(SocioIdtextBox.Text, out socioId);
             registro.SocioId = socioId;
-            registro.Eliminar();
+            if (registro.Eliminar())
+            {
+                MessageBox.Show("Se han eliminado los datos!");
+            }
+            else
+            {
+                MessageBox.Show("No se han eliminado los datos!");
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -157,11 +164,11 @@ namespace CocoaExport.Vistas
             
             table = socios.Listar("", "", "");
 
-            chart.Series.Add("Socios");
+            /*chart.Series.Add("Socios");
             chart.Series["Series1"].XValueMember = "Fecha";
             chart.Series["Series1"].YValueMembers = "Monto";
             chart.DataSource = table;
-            chart.DataBind();
+            chart.DataBind();*/
 
         }
 
@@ -169,7 +176,7 @@ namespace CocoaExport.Vistas
         {
              
            
-                if (Char.IsLetter(e.KeyChar))
+               /* if (Char.IsLetter(e.KeyChar))
                 {
                     e.Handled = false;
                 }
@@ -186,7 +193,7 @@ namespace CocoaExport.Vistas
                     e.Handled = true;
                 MessageBox.Show("No acepta numeros este campo");
                
-                }
+                }*/
             }
 
         private void CertificacioncomboBox_SelectedIndexChanged(object sender, EventArgs e)

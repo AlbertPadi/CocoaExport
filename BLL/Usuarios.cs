@@ -19,7 +19,8 @@ namespace BLL
         public string Direccion { get; set; }
         public string NombreUsuario { get; set; }
         public string Contrasena { get; set; }
-        
+        public string Contrasena1 { get; set; }
+
 
         public Usuarios()
         {
@@ -29,7 +30,8 @@ namespace BLL
             this.Direccion = "";
             this.NombreUsuario = "";
             this.Contrasena = "";
-            
+            this.Contrasena1 = "";
+
         }
 
        
@@ -51,6 +53,41 @@ namespace BLL
             return true;
 
         }
+
+        public override bool Insertar()
+        {
+            bool retorno = false;
+            try
+            {
+                retorno = conexion.Ejecutar(String.Format("Insert Into Usuarios(Nombres, Apellidos, Direccion, NombreUsuario, Contrasena, Contrasena1) Values('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", this.Nombre, this.Apellido, this.Direccion, this.NombreUsuario, this.Contrasena, this.Contrasena1));
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+            return retorno;
+        }
+
+
+        public override bool Editar()
+        {
+            bool retorno = false;
+            try
+            {
+                retorno = conexion.Ejecutar(String.Format("Update Usuarios Set Nombres='{0}', Apellidos='{1}', Direccion='{2}', NombreUsuario='{3}', Contrasena='{4}, Contrasena1='{5}' where UsuarioId={6}", this.Nombre, this.Apellido, this.Direccion, this.NombreUsuario, this.Contrasena, this.Contrasena1, this.UsuarioId));
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+            return retorno;
+        }
+
         public override bool Eliminar()
         {
             return conexion.Ejecutar(String.Format("Delete From Usuarios where UsuarioId = {0}", this.UsuarioId));
@@ -58,36 +95,28 @@ namespace BLL
 
         public override bool Buscar(int IdBuscado)
         {
-            throw new NotImplementedException();
-        }
+            DataTable dt;
 
-        public override bool Editar()
-        {
-            bool retorno = false;
-
-            retorno = conexion.Ejecutar(String.Format("Update Usuarios Set Nombres='{0}', Apellidos='{1}', Direccion='{2}', NombreUsuario='{3}', Contraseña='{4}' where UsuarioId={5}", this.Nombre, this.Apellido, this.Direccion, this.NombreUsuario, this.Contrasena));
-            return retorno;
-        }
-
-        public override bool Insertar()
-        {
-            bool retorno = false;
-            try
+            dt = conexion.getDatos(String.Format("select *from Usuarios where UsuarioId= {0}", IdBuscado));
+            if (dt.Rows.Count > 0)
             {
-               retorno = conexion.Ejecutar(String.Format("Insert Into Usuarios(Nombres, Apellidos, Direccion, NombreUsuario, Contrasena) Values('{0}', '{1}', '{2}', '{3}', '{4}')", this.Nombre, this.Apellido, this.Direccion, this.NombreUsuario, this.Contrasena));
+                this.Nombre = dt.Rows[0]["Nombres"].ToString();
+                this.Apellido = dt.Rows[0]["Apellidos"].ToString();
+                this.Direccion = dt.Rows[0]["Direccion"].ToString();
+                this.Contrasena = dt.Rows[0]["Contrasena"].ToString();
+                this.NombreUsuario = dt.Rows[0]["NombreUsuario"].ToString();
+                this.Contrasena1 = dt.Rows[0]["Contrasena1"].ToString();
             }
-            catch (Exception ex)
-            {
 
-                throw ex;
-            }
-           
-            return retorno;
+            return dt.Rows.Count > 0;
         }
 
-        public override DataTable Listar(string campos, string condicion, string Filtro)
+        public override DataTable Listar(string Campos, string Condicion, string Orden)
         {
-            throw new NotImplementedException();
+            string ordenFinal = "";
+            if (!Orden.Equals(""))
+                ordenFinal = " Orden By " + Orden;
+            return conexion.getDatos(" Select " + Campos + " From Usuarios Where " + Condicion + " " + ordenFinal);
         }
     }
 }

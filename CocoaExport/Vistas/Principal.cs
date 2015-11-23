@@ -13,7 +13,7 @@ namespace CocoaExport
 {
     public partial class Principal : Form
     {
-        Login login = new Login();
+        
         public Principal()
         {
             InitializeComponent();
@@ -21,7 +21,7 @@ namespace CocoaExport
 
         private void Principal_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void RegistrarSbutton_Click(object sender, EventArgs e)
@@ -69,14 +69,12 @@ namespace CocoaExport
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
          
-            this.Close();
-
+            
         }
 
         private void configuracionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            login.Show();
-            this.Close();
+            
            
         }
 
@@ -99,7 +97,7 @@ namespace CocoaExport
 
         private void registroInspeccionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RegistroDeInspecciones Inspecciones = new RegistroDeInspecciones();
+            InspeccionesRegistro Inspecciones = new InspeccionesRegistro();
             Inspecciones.Show();
         }
 
@@ -123,6 +121,36 @@ namespace CocoaExport
         private void sistemaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void salirToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            
+                Login login = new Login();
+                this.Close();
+                login.Show();
+            
+        }
+
+        private void controlLotesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void sociosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Listar listar = new Listar();
+            listar.Show();
+        }
+
+        private void inspeccionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

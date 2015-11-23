@@ -10,16 +10,16 @@ namespace BLL
     public class DestinosExportes : ClaseMaestra
     {
         Conexion conexion = new Conexion();
-        public int DestinosId { get; set; }
+        public int DestinoId { get; set; }
         public string Pais { get; set; }
         public string CodigoDestino { get; set; }
         public string NombreDestino { get; set; }
         public string Direccion { get; set; }
-        public int CodigoPostal { get; set; }
+        public double CodigoPostal { get; set; }
 
         public DestinosExportes()
         {
-            this.DestinosId = 0;
+            this.DestinoId = 0;
             this.Pais = "";
             this.CodigoDestino = "";
             this.NombreDestino = "";
@@ -27,7 +27,7 @@ namespace BLL
             this.CodigoPostal = 0;
         }
 
-        public DestinosExportes(string pais, string nombre, string direccion, int codigopostal)
+        public DestinosExportes(string pais, string nombre, string direccion, double codigopostal)
         {
             this.Pais = pais;
             this.NombreDestino = nombre;
@@ -55,7 +55,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-                retorno = conexion.Ejecutar(String.Format("Update DestinosExportes set Pais = '{0}', CodigoDestino='{1}', NombreDestino = '{2}', Direccion = '{3}', CodigoPostal = {4} where DestinosId = {5}", this.Pais, this.CodigoDestino, this.NombreDestino, this.Direccion, this.CodigoPostal, this.DestinosId));
+                retorno = conexion.Ejecutar(String.Format("Update DestinosExportes set Pais = '{0}', CodigoDestino='{1}', NombreDestino = '{2}', Direccion = '{3}', CodigoPostal = {4} where DestinoId = {5}", this.Pais, this.CodigoDestino, this.NombreDestino, this.Direccion, this.CodigoPostal, this.DestinoId));
             }
             catch (Exception ex)
             {
@@ -70,7 +70,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-                retorno = conexion.Ejecutar(String.Format("Delete From DestinosExportes where DestinosId = {0}", this.DestinosId));
+                retorno = conexion.Ejecutar(String.Format("Delete From DestinosExportes where DestinoId = {0}", this.DestinoId));
             }
             catch (Exception ex)
             {
@@ -84,7 +84,7 @@ namespace BLL
         {
             DataTable dt;
            
-                dt = conexion.getDatos(String.Format("select *from DestinosExportes where DestinosId= {0}", IdBuscado));
+                dt = conexion.getDatos(String.Format("select *from DestinosExportes where DestinoId= {0}", IdBuscado));
                 if (dt.Rows.Count > 0)
                 {
                     this.Pais = dt.Rows[0]["Pais"].ToString();
@@ -99,11 +99,11 @@ namespace BLL
         
         public override DataTable Listar(string Campos, string Condicion, string Orden)
         {
-            string ordenFinal = " ";
+            string ordenFinal = "";
             if (!Orden.Equals(""))
                 ordenFinal = " Orden By " + Orden;
 
-            return conexion.getDatos(" Select " + Campos + " from DestinosExportes where " + Condicion + ordenFinal);
+            return conexion.getDatos(" Select " + Campos + " from DestinosExportes where " + Condicion + "" + ordenFinal);
         }
     }
 }

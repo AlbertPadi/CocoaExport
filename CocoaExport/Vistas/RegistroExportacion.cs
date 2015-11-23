@@ -38,9 +38,9 @@ namespace CocoaExport.Vistas
             CertificacionIdcomboBox.DisplayMember = "Descripcion";
             CertificacionIdcomboBox.ValueMember = "CertificacionId";
 
-            DestinosIdcomboBox.DataSource = destinos.Listar("DestinosId, NombreDestino", "1=1", "");
+            DestinosIdcomboBox.DataSource = destinos.Listar("DestinoId, NombreDestino", "1=1", "");
             DestinosIdcomboBox.DisplayMember = "NombreDestino";
-            DestinosIdcomboBox.ValueMember = "DestinosId";
+            DestinosIdcomboBox.ValueMember = "DestinoId";
         }
 
         private void Guardarbutton_Click(object sender, EventArgs e)
@@ -53,25 +53,29 @@ namespace CocoaExport.Vistas
                 exportacion.CantidadToneladas = toneladas;
                 exportacion.Fecha = FechadateTimePicker.Text;
                 exportacion.CertificacionId = (int)CertificacionIdcomboBox.SelectedValue;
-                exportacion.ExportacionId = (int)DestinosIdcomboBox.SelectedValue;
+                exportacion.DestinoId = (int)DestinosIdcomboBox.SelectedValue;
                 exportacion.Resumen = ResumenrichTextBox.Text;
 
-                
+
                 for (int i = 0; i < LoteslistBox.Items.Count; i++)
-                {
-                    Lotes lotes = new Lotes();
-                    int id = (int)LoteIdcomboBox.SelectedValue;
-                    
-                    exportacion.AgregarLotess(id,"");
-                }
-                if (exportacion.Insertar())
-                {
-                    MessageBox.Show("Se guardaron los datos!");
-                }
-                else
-                {
-                    MessageBox.Show("No se han guardado los datos!");
-                }
+                 {
+                     Lotes lotes = new Lotes();
+                     int id = (int)LoteIdcomboBox.SelectedValue;
+                     
+
+                     exportacion.AgregarLotes(id, LoteIdcomboBox.Items[i].ToString());
+                 }
+                 if (exportacion.Insertar())
+                 {
+                     MessageBox.Show("Se guardaron los datos!");
+                 }
+                 else
+                 {
+                     MessageBox.Show("No se han guardado los datos!");
+                 }
+
+
+             
 
             }
             else
@@ -83,6 +87,7 @@ namespace CocoaExport.Vistas
                 exportacion.CantidadToneladas = toneladas;
                 exportacion.Fecha = FechadateTimePicker.Text;
                 exportacion.CertificacionId = (int)CertificacionIdcomboBox.SelectedValue;
+                exportacion.ExportacionId = (int)DestinosIdcomboBox.SelectedValue;
                 exportacion.Resumen = ResumenrichTextBox.Text;
 
 
@@ -103,6 +108,11 @@ namespace CocoaExport.Vistas
         }
 
         private void LotescomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DestinosIdcomboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -65,8 +65,16 @@ namespace CocoaExport.Vistas
 
         private void button3_Click(object sender, EventArgs e)
         {
-            registro.CertificacionID = Convert.ToInt32(IDtextBox.Text);
-            registro.Eliminar();
+            int.TryParse(IDtextBox.Text, out certificacionId);
+            registro.CertificacionID = certificacionId;
+            if (registro.Eliminar())
+            {
+                MessageBox.Show("Se han eliminado los datos!");
+            }
+            else
+            {
+                MessageBox.Show("No se han eliminado los datos!");
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)

@@ -30,7 +30,7 @@ namespace CocoaExport.Vistas
         {
 
         }
-
+       
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
             
@@ -43,15 +43,25 @@ namespace CocoaExport.Vistas
                 Registro.Direccion = DirecciontextBox.Text;
                 Registro.NombreUsuario = NomUsuariotextBox.Text;
                 Registro.Contrasena = ContraseñatextBox.Text;
-
-                if (Registro.Insertar())
+                Registro.Contrasena1 = Contrasena1textBox.Text;
+                if (ContraseñatextBox.Text.Trim() != Contrasena1textBox.Text.Trim())
                 {
-                    MessageBox.Show("Se insertaron los datos correctamente!");
+                    errorProvider.SetError(ContraseñatextBox, "Las contraseña no son identicas");
+                    errorProvider.SetError(Contrasena1textBox, "Las contraseña no son identicas");
+                    Contrasena1textBox.Clear();
                 }
                 else
                 {
-                    MessageBox.Show("No se han podido guardar los datos!");
+                    if (Registro.Insertar())
+                    {
+                        MessageBox.Show("Se insertaron los datos correctamente!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se han podido guardar los datos!");
+                    }
                 }
+                
             }
             else
             {
@@ -63,13 +73,22 @@ namespace CocoaExport.Vistas
                 Registro.NombreUsuario = NomUsuariotextBox.Text;
                 Registro.Contrasena = ContraseñatextBox.Text;
 
-                if (Registro.Editar())
+                if (ContraseñatextBox.Text.Trim() != Contrasena1textBox.Text.Trim())
                 {
-                    MessageBox.Show("Se actualizaron los datos correctamente!");
+                    errorProvider.SetError(ContraseñatextBox, "Las contraseña no son identicas");
+                    errorProvider.SetError(Contrasena1textBox, "Las contraseña no son identicas");
+                    Contrasena1textBox.Clear();
                 }
                 else
                 {
-                    MessageBox.Show("No se han podido actualizar los datos!");
+                    if (Registro.Insertar())
+                    {
+                        MessageBox.Show("Se insertaron los datos correctamente!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se han podido guardar los datos!");
+                    }
                 }
             }
             
@@ -98,6 +117,22 @@ namespace CocoaExport.Vistas
                 MessageBox.Show("Error al eliminar los datos!");
             }
              
+        }
+
+        private void Buscarbutton_Click(object sender, EventArgs e)
+        {
+            int.TryParse(UsuarioIdtextBox.Text, out usuarioId);
+            int IdBuscado;
+            IdBuscado = usuarioId;
+            if (Registro.Buscar(IdBuscado))
+            {
+                NombretextBox.Text = Registro.Nombre;
+                ApellidotextBox.Text = Registro.Apellido;
+                DirecciontextBox.Text = Registro.Direccion;
+                ContraseñatextBox.Text = Registro.Contrasena;
+                NomUsuariotextBox.Text = Registro.NombreUsuario;
+                Contrasena1textBox.Text = Registro.Contrasena1;
+            }
         }
     }
 }

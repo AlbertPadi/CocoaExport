@@ -34,7 +34,6 @@
             this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.configuracionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroSociosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,7 +74,7 @@
             this.MenumenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenumenuStrip.Name = "MenumenuStrip";
             this.MenumenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.MenumenuStrip.Size = new System.Drawing.Size(832, 24);
+            this.MenumenuStrip.Size = new System.Drawing.Size(810, 24);
             this.MenumenuStrip.TabIndex = 14;
             this.MenumenuStrip.Text = "menuStrip1";
             // 
@@ -83,8 +82,7 @@
             // 
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevoToolStripMenuItem,
-            this.salirToolStripMenuItem,
-            this.configuracionToolStripMenuItem});
+            this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
@@ -109,15 +107,8 @@
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.salirToolStripMenuItem.Text = "Mi perfil";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
-            // 
-            // configuracionToolStripMenuItem
-            // 
-            this.configuracionToolStripMenuItem.Name = "configuracionToolStripMenuItem";
-            this.configuracionToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.configuracionToolStripMenuItem.Text = "Salir";
-            this.configuracionToolStripMenuItem.Click += new System.EventHandler(this.configuracionToolStripMenuItem_Click);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click_1);
             // 
             // registroToolStripMenuItem
             // 
@@ -160,12 +151,14 @@
             this.listarToolStripMenuItem.Name = "listarToolStripMenuItem";
             this.listarToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.listarToolStripMenuItem.Text = "Listar";
+            this.listarToolStripMenuItem.Click += new System.EventHandler(this.listarToolStripMenuItem_Click);
             // 
             // sociosToolStripMenuItem
             // 
             this.sociosToolStripMenuItem.Name = "sociosToolStripMenuItem";
             this.sociosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sociosToolStripMenuItem.Text = "Socios";
+            this.sociosToolStripMenuItem.Click += new System.EventHandler(this.sociosToolStripMenuItem_Click);
             // 
             // usuariosToolStripMenuItem
             // 
@@ -187,6 +180,7 @@
             this.inspeccionesToolStripMenuItem.Name = "inspeccionesToolStripMenuItem";
             this.inspeccionesToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
             this.inspeccionesToolStripMenuItem.Text = "Inspecciones";
+            this.inspeccionesToolStripMenuItem.Click += new System.EventHandler(this.inspeccionesToolStripMenuItem_Click);
             // 
             // registroInspeccionesToolStripMenuItem
             // 
@@ -209,6 +203,7 @@
             this.controlLotesToolStripMenuItem.Name = "controlLotesToolStripMenuItem";
             this.controlLotesToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
             this.controlLotesToolStripMenuItem.Text = "Control Lotes";
+            this.controlLotesToolStripMenuItem.Click += new System.EventHandler(this.controlLotesToolStripMenuItem_Click);
             // 
             // registroToolStripMenuItem2
             // 
@@ -236,15 +231,15 @@
             // registrarToolStripMenuItem
             // 
             this.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
-            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.registrarToolStripMenuItem.Text = "Registro";
             this.registrarToolStripMenuItem.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click);
             // 
             // consultarToolStripMenuItem
             // 
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.consultarToolStripMenuItem.Text = "Consultar";
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.consultarToolStripMenuItem.Text = "Listar";
             // 
             // exportacionToolStripMenuItem
             // 
@@ -282,7 +277,7 @@
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.BackgroundImage = global::CocoaExport.Properties.Resources.Logo_CocoaExport_2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(832, 355);
+            this.ClientSize = new System.Drawing.Size(810, 452);
             this.Controls.Add(this.MenumenuStrip);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -309,9 +304,7 @@
         private System.Windows.Forms.ToolStripMenuItem controlDeLotesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exportacionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sistemaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem configuracionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroCertificacionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
@@ -319,14 +312,15 @@
         private System.Windows.Forms.ToolStripMenuItem registroToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sociosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem certificacionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem controlLotesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem listarToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem listarToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sociosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem certificacionesToolStripMenuItem;
     }
 }
 
